@@ -18,15 +18,15 @@
 		AF2A29CB1934CCB000974D10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2A29AA1934CCB000974D10 /* Cocoa.framework */; };
 		AF2A29D31934CCB000974D10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF2A29D11934CCB000974D10 /* InfoPlist.strings */; };
 		AF2A29D51934CCB000974D10 /* BatePontoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A29D41934CCB000974D10 /* BatePontoTests.m */; };
-		AFB5AA72193948D400BD1FC6 /* NSData+NSRBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA66193948D400BD1FC6 /* NSData+NSRBase64.m */; };
-		AFB5AA73193948D400BD1FC6 /* NSString+NSRInflection.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA68193948D400BD1FC6 /* NSString+NSRInflection.m */; };
-		AFB5AA74193948D400BD1FC6 /* NSRConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA6B193948D400BD1FC6 /* NSRConfig.m */; };
-		AFB5AA75193948D400BD1FC6 /* NSRRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA6D193948D400BD1FC6 /* NSRRemoteManagedObject.m */; };
-		AFB5AA76193948D400BD1FC6 /* NSRRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA6F193948D400BD1FC6 /* NSRRemoteObject.m */; };
-		AFB5AA77193948D400BD1FC6 /* NSRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA71193948D400BD1FC6 /* NSRRequest.m */; };
-		AFB5AA79193948ED00BD1FC6 /* license.md in Resources */ = {isa = PBXBuildFile; fileRef = AFB5AA78193948ED00BD1FC6 /* license.md */; };
 		AFB5AA8019394AA600BD1FC6 /* Punch.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA7D19394AA600BD1FC6 /* Punch.m */; };
 		AFB5AA8119394AA600BD1FC6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA7F19394AA600BD1FC6 /* User.m */; };
+		AFB5AA9219394E0100BD1FC6 /* NSData+NSRBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA8519394E0100BD1FC6 /* NSData+NSRBase64.m */; };
+		AFB5AA9319394E0100BD1FC6 /* NSString+NSRInflection.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA8719394E0100BD1FC6 /* NSString+NSRInflection.m */; };
+		AFB5AA9419394E0100BD1FC6 /* license.md in Resources */ = {isa = PBXBuildFile; fileRef = AFB5AA8819394E0100BD1FC6 /* license.md */; };
+		AFB5AA9519394E0100BD1FC6 /* NSRConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA8B19394E0100BD1FC6 /* NSRConfig.m */; };
+		AFB5AA9619394E0100BD1FC6 /* NSRRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA8D19394E0100BD1FC6 /* NSRRemoteManagedObject.m */; };
+		AFB5AA9719394E0100BD1FC6 /* NSRRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA8F19394E0100BD1FC6 /* NSRRemoteObject.m */; };
+		AFB5AA9819394E0100BD1FC6 /* NSRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA9119394E0100BD1FC6 /* NSRRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,24 +59,24 @@
 		AF2A29D01934CCB000974D10 /* BatePontoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BatePontoTests-Info.plist"; sourceTree = "<group>"; };
 		AF2A29D21934CCB000974D10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF2A29D41934CCB000974D10 /* BatePontoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatePontoTests.m; sourceTree = "<group>"; };
-		AFB5AA65193948D400BD1FC6 /* NSData+NSRBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NSRBase64.h"; sourceTree = "<group>"; };
-		AFB5AA66193948D400BD1FC6 /* NSData+NSRBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NSRBase64.m"; sourceTree = "<group>"; };
-		AFB5AA67193948D400BD1FC6 /* NSString+NSRInflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSRInflection.h"; sourceTree = "<group>"; };
-		AFB5AA68193948D400BD1FC6 /* NSString+NSRInflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSRInflection.m"; sourceTree = "<group>"; };
-		AFB5AA69193948D400BD1FC6 /* NSRails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRails.h; sourceTree = "<group>"; };
-		AFB5AA6A193948D400BD1FC6 /* NSRConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRConfig.h; sourceTree = "<group>"; };
-		AFB5AA6B193948D400BD1FC6 /* NSRConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRConfig.m; sourceTree = "<group>"; };
-		AFB5AA6C193948D400BD1FC6 /* NSRRemoteManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRRemoteManagedObject.h; sourceTree = "<group>"; };
-		AFB5AA6D193948D400BD1FC6 /* NSRRemoteManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRRemoteManagedObject.m; sourceTree = "<group>"; };
-		AFB5AA6E193948D400BD1FC6 /* NSRRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRRemoteObject.h; sourceTree = "<group>"; };
-		AFB5AA6F193948D400BD1FC6 /* NSRRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRRemoteObject.m; sourceTree = "<group>"; };
-		AFB5AA70193948D400BD1FC6 /* NSRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRRequest.h; sourceTree = "<group>"; };
-		AFB5AA71193948D400BD1FC6 /* NSRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRRequest.m; sourceTree = "<group>"; };
-		AFB5AA78193948ED00BD1FC6 /* license.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.md; sourceTree = "<group>"; };
 		AFB5AA7C19394AA600BD1FC6 /* Punch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Punch.h; sourceTree = "<group>"; };
 		AFB5AA7D19394AA600BD1FC6 /* Punch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Punch.m; sourceTree = "<group>"; };
 		AFB5AA7E19394AA600BD1FC6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		AFB5AA7F19394AA600BD1FC6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AFB5AA8419394E0100BD1FC6 /* NSData+NSRBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NSRBase64.h"; sourceTree = "<group>"; };
+		AFB5AA8519394E0100BD1FC6 /* NSData+NSRBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NSRBase64.m"; sourceTree = "<group>"; };
+		AFB5AA8619394E0100BD1FC6 /* NSString+NSRInflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSRInflection.h"; sourceTree = "<group>"; };
+		AFB5AA8719394E0100BD1FC6 /* NSString+NSRInflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSRInflection.m"; sourceTree = "<group>"; };
+		AFB5AA8819394E0100BD1FC6 /* license.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.md; sourceTree = "<group>"; };
+		AFB5AA8919394E0100BD1FC6 /* NSRails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRails.h; sourceTree = "<group>"; };
+		AFB5AA8A19394E0100BD1FC6 /* NSRConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRConfig.h; sourceTree = "<group>"; };
+		AFB5AA8B19394E0100BD1FC6 /* NSRConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRConfig.m; sourceTree = "<group>"; };
+		AFB5AA8C19394E0100BD1FC6 /* NSRRemoteManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRRemoteManagedObject.h; sourceTree = "<group>"; };
+		AFB5AA8D19394E0100BD1FC6 /* NSRRemoteManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRRemoteManagedObject.m; sourceTree = "<group>"; };
+		AFB5AA8E19394E0100BD1FC6 /* NSRRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRRemoteObject.h; sourceTree = "<group>"; };
+		AFB5AA8F19394E0100BD1FC6 /* NSRRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRRemoteObject.m; sourceTree = "<group>"; };
+		AFB5AA9019394E0100BD1FC6 /* NSRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRRequest.h; sourceTree = "<group>"; };
+		AFB5AA9119394E0100BD1FC6 /* NSRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 		AF2A299E1934CCB000974D10 = {
 			isa = PBXGroup;
 			children = (
-				AFB5AA63193948D400BD1FC6 /* NSRails */,
+				AFB5AA8219394E0100BD1FC6 /* NSRails */,
 				AF2A29B01934CCB000974D10 /* BatePonto */,
 				AF2A29CE1934CCB000974D10 /* BatePontoTests */,
 				AF2A29A91934CCB000974D10 /* Frameworks */,
@@ -184,36 +184,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AFB5AA63193948D400BD1FC6 /* NSRails */ = {
-			isa = PBXGroup;
-			children = (
-				AFB5AA78193948ED00BD1FC6 /* license.md */,
-				AFB5AA64193948D400BD1FC6 /* Categories */,
-				AFB5AA69193948D400BD1FC6 /* NSRails.h */,
-				AFB5AA6A193948D400BD1FC6 /* NSRConfig.h */,
-				AFB5AA6B193948D400BD1FC6 /* NSRConfig.m */,
-				AFB5AA6C193948D400BD1FC6 /* NSRRemoteManagedObject.h */,
-				AFB5AA6D193948D400BD1FC6 /* NSRRemoteManagedObject.m */,
-				AFB5AA6E193948D400BD1FC6 /* NSRRemoteObject.h */,
-				AFB5AA6F193948D400BD1FC6 /* NSRRemoteObject.m */,
-				AFB5AA70193948D400BD1FC6 /* NSRRequest.h */,
-				AFB5AA71193948D400BD1FC6 /* NSRRequest.m */,
-			);
-			name = NSRails;
-			path = Source;
-			sourceTree = "<group>";
-		};
-		AFB5AA64193948D400BD1FC6 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				AFB5AA65193948D400BD1FC6 /* NSData+NSRBase64.h */,
-				AFB5AA66193948D400BD1FC6 /* NSData+NSRBase64.m */,
-				AFB5AA67193948D400BD1FC6 /* NSString+NSRInflection.h */,
-				AFB5AA68193948D400BD1FC6 /* NSString+NSRInflection.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		AFB5AA7A1939493600BD1FC6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +200,35 @@
 			children = (
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AFB5AA8219394E0100BD1FC6 /* NSRails */ = {
+			isa = PBXGroup;
+			children = (
+				AFB5AA8319394E0100BD1FC6 /* Categories */,
+				AFB5AA8819394E0100BD1FC6 /* license.md */,
+				AFB5AA8919394E0100BD1FC6 /* NSRails.h */,
+				AFB5AA8A19394E0100BD1FC6 /* NSRConfig.h */,
+				AFB5AA8B19394E0100BD1FC6 /* NSRConfig.m */,
+				AFB5AA8C19394E0100BD1FC6 /* NSRRemoteManagedObject.h */,
+				AFB5AA8D19394E0100BD1FC6 /* NSRRemoteManagedObject.m */,
+				AFB5AA8E19394E0100BD1FC6 /* NSRRemoteObject.h */,
+				AFB5AA8F19394E0100BD1FC6 /* NSRRemoteObject.m */,
+				AFB5AA9019394E0100BD1FC6 /* NSRRequest.h */,
+				AFB5AA9119394E0100BD1FC6 /* NSRRequest.m */,
+			);
+			path = NSRails;
+			sourceTree = "<group>";
+		};
+		AFB5AA8319394E0100BD1FC6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AFB5AA8419394E0100BD1FC6 /* NSData+NSRBase64.h */,
+				AFB5AA8519394E0100BD1FC6 /* NSData+NSRBase64.m */,
+				AFB5AA8619394E0100BD1FC6 /* NSString+NSRInflection.h */,
+				AFB5AA8719394E0100BD1FC6 /* NSString+NSRInflection.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF2A29B51934CCB000974D10 /* InfoPlist.strings in Resources */,
-				AFB5AA79193948ED00BD1FC6 /* license.md in Resources */,
+				AFB5AA9419394E0100BD1FC6 /* license.md in Resources */,
 				AF2A29C31934CCB000974D10 /* Images.xcassets in Resources */,
 				AF2A29BB1934CCB000974D10 /* Credits.rtf in Resources */,
 				AF2A29C11934CCB000974D10 /* MainMenu.xib in Resources */,
@@ -334,14 +333,14 @@
 			files = (
 				AFB5AA8119394AA600BD1FC6 /* User.m in Sources */,
 				AFB5AA8019394AA600BD1FC6 /* Punch.m in Sources */,
-				AFB5AA73193948D400BD1FC6 /* NSString+NSRInflection.m in Sources */,
+				AFB5AA9819394E0100BD1FC6 /* NSRRequest.m in Sources */,
 				AF2A29B71934CCB000974D10 /* main.m in Sources */,
+				AFB5AA9719394E0100BD1FC6 /* NSRRemoteObject.m in Sources */,
+				AFB5AA9319394E0100BD1FC6 /* NSString+NSRInflection.m in Sources */,
 				AF2A29BE1934CCB000974D10 /* RAAppDelegate.m in Sources */,
-				AFB5AA77193948D400BD1FC6 /* NSRRequest.m in Sources */,
-				AFB5AA74193948D400BD1FC6 /* NSRConfig.m in Sources */,
-				AFB5AA75193948D400BD1FC6 /* NSRRemoteManagedObject.m in Sources */,
-				AFB5AA76193948D400BD1FC6 /* NSRRemoteObject.m in Sources */,
-				AFB5AA72193948D400BD1FC6 /* NSData+NSRBase64.m in Sources */,
+				AFB5AA9519394E0100BD1FC6 /* NSRConfig.m in Sources */,
+				AFB5AA9619394E0100BD1FC6 /* NSRRemoteManagedObject.m in Sources */,
+				AFB5AA9219394E0100BD1FC6 /* NSData+NSRBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
