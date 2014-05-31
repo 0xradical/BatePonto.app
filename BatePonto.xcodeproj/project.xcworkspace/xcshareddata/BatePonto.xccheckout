@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>ED4CA300-503F-4FFB-95F0-A905FE715DED</string>
+	<string>866AD510-E201-4EC9-811D-249BE0FFEEBD</string>
 	<key>IDESourceControlProjectName</key>
 	<string>BatePonto</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>ssh://github.com/thiagobrandam/BatePonto.app.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BatePonto/BatePonto.xcodeproj/project.xcworkspace</string>
+	<string>BatePonto.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>745C3537-0852-412D-B8E4-4E0B11A5D8F8</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/thiagobrandam/BatePonto.app.git</string>

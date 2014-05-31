@@ -12,7 +12,6 @@
 		AF2A29B71934CCB000974D10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A29B61934CCB000974D10 /* main.m */; };
 		AF2A29BB1934CCB000974D10 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AF2A29B91934CCB000974D10 /* Credits.rtf */; };
 		AF2A29BE1934CCB000974D10 /* RAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A29BD1934CCB000974D10 /* RAAppDelegate.m */; };
-		AF2A29C11934CCB000974D10 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2A29BF1934CCB000974D10 /* MainMenu.xib */; };
 		AF2A29C31934CCB000974D10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2A29C21934CCB000974D10 /* Images.xcassets */; };
 		AF2A29CA1934CCB000974D10 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2A29C91934CCB000974D10 /* XCTest.framework */; };
 		AF2A29CB1934CCB000974D10 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2A29AA1934CCB000974D10 /* Cocoa.framework */; };
@@ -27,6 +26,7 @@
 		AFB5AA9819394E0100BD1FC6 /* NSRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA9119394E0100BD1FC6 /* NSRRequest.m */; };
 		AFB5AA9E19394E9600BD1FC6 /* Punch.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA9B19394E9600BD1FC6 /* Punch.m */; };
 		AFB5AA9F19394E9600BD1FC6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA9D19394E9600BD1FC6 /* User.m */; };
+		AFB5AAA2193A204F00BD1FC6 /* AuthorizationSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB5AAA1193A204F00BD1FC6 /* AuthorizationSettings.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +77,7 @@
 		AFB5AA9B19394E9600BD1FC6 /* Punch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Punch.m; sourceTree = "<group>"; };
 		AFB5AA9C19394E9600BD1FC6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		AFB5AA9D19394E9600BD1FC6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AFB5AAA1193A204F00BD1FC6 /* AuthorizationSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AuthorizationSettings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +163,7 @@
 				AF2A29B61934CCB000974D10 /* main.m */,
 				AF2A29B81934CCB000974D10 /* BatePonto-Prefix.pch */,
 				AF2A29B91934CCB000974D10 /* Credits.rtf */,
+				AFB5AAA1193A204F00BD1FC6 /* AuthorizationSettings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -311,8 +313,8 @@
 				AF2A29B51934CCB000974D10 /* InfoPlist.strings in Resources */,
 				AFB5AA9419394E0100BD1FC6 /* license.md in Resources */,
 				AF2A29C31934CCB000974D10 /* Images.xcassets in Resources */,
+				AFB5AAA2193A204F00BD1FC6 /* AuthorizationSettings.plist in Resources */,
 				AF2A29BB1934CCB000974D10 /* Credits.rtf in Resources */,
-				AF2A29C11934CCB000974D10 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

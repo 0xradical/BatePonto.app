@@ -327,7 +327,8 @@ NSRLogTagged(inout, @"%@ %@", [NSString stringWithFormat:__VA_ARGS__],(NSRLog > 
         else
 		{
             //let it raise an exception if invalid json object
-            data = [NSJSONSerialization dataWithJSONObject:body options:0 error:nil];
+            data = [NSJSONSerialization dataWithJSONObject:body options:NSJSONWritingPrettyPrinted error:nil];
+                        
             if (data)
             {
                 [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];                
