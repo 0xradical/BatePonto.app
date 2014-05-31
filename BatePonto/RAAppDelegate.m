@@ -8,6 +8,13 @@
 
 #import "RAAppDelegate.h"
 #import "NSRails.h"
+#import "Models/Punch.h"
+
+@interface RAAppDelegate ()
+
+@property (nonatomic) NSArray *punches;
+
+@end
 
 @implementation RAAppDelegate
 
@@ -37,9 +44,29 @@
        @"api_token": authSettings[@"API Token"]
     };
     
+    id json = [request sendSynchronous:&error];
     
-    [request sendSynchronous:&error];    
+    self.punches = [Punch objectsWithRemoteDictionaries:json];
+    
+    NSLog(@"%@", self.punches);
+    
+    [self.punchesList reloadData];
     
 }
+
+#pragma mark - Data Source Protocol
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return [self.punches count];
+}
+
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    Punch *punch = self.punches[row];
+    
+    return [punch valueForKey:[tableColumn identifier]];
+}
+
 
 @end

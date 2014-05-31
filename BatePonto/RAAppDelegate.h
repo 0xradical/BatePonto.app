@@ -8,9 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface RAAppDelegate : NSObject <NSApplicationDelegate>
+@interface RAAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDataSource>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTableView *punchesList;
 
 - (IBAction)retrievePunches:(id)sender;
 

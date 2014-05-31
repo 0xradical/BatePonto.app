@@ -27,6 +27,7 @@
 		AFB5AA9E19394E9600BD1FC6 /* Punch.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA9B19394E9600BD1FC6 /* Punch.m */; };
 		AFB5AA9F19394E9600BD1FC6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA9D19394E9600BD1FC6 /* User.m */; };
 		AFB5AAA2193A204F00BD1FC6 /* AuthorizationSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB5AAA1193A204F00BD1FC6 /* AuthorizationSettings.plist */; };
+		AFB5AAAB193A46DB00BD1FC6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB5AAAA193A46DB00BD1FC6 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,6 @@
 		AF2A29BA1934CCB000974D10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		AF2A29BC1934CCB000974D10 /* RAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAAppDelegate.h; sourceTree = "<group>"; };
 		AF2A29BD1934CCB000974D10 /* RAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAAppDelegate.m; sourceTree = "<group>"; };
-		AF2A29C01934CCB000974D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		AF2A29C21934CCB000974D10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF2A29C81934CCB000974D10 /* BatePontoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatePontoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2A29C91934CCB000974D10 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -78,6 +78,7 @@
 		AFB5AA9C19394E9600BD1FC6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		AFB5AA9D19394E9600BD1FC6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		AFB5AAA1193A204F00BD1FC6 /* AuthorizationSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AuthorizationSettings.plist; sourceTree = "<group>"; };
+		AFB5AAAA193A46DB00BD1FC6 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,11 +145,11 @@
 		AF2A29B01934CCB000974D10 /* BatePonto */ = {
 			isa = PBXGroup;
 			children = (
+				AFB5AAAA193A46DB00BD1FC6 /* MainMenu.xib */,
 				AFB5AAA019394EA500BD1FC6 /* Controllers */,
 				AFB5AA9919394E9600BD1FC6 /* Models */,
 				AF2A29BC1934CCB000974D10 /* RAAppDelegate.h */,
 				AF2A29BD1934CCB000974D10 /* RAAppDelegate.m */,
-				AF2A29BF1934CCB000974D10 /* MainMenu.xib */,
 				AF2A29C21934CCB000974D10 /* Images.xcassets */,
 				AF2A29B11934CCB000974D10 /* Supporting Files */,
 			);
@@ -315,6 +316,7 @@
 				AF2A29C31934CCB000974D10 /* Images.xcassets in Resources */,
 				AFB5AAA2193A204F00BD1FC6 /* AuthorizationSettings.plist in Resources */,
 				AF2A29BB1934CCB000974D10 /* Credits.rtf in Resources */,
+				AFB5AAAB193A46DB00BD1FC6 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,14 +381,6 @@
 				AF2A29BA1934CCB000974D10 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		AF2A29BF1934CCB000974D10 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF2A29C01934CCB000974D10 /* Base */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		AF2A29D11934CCB000974D10 /* InfoPlist.strings */ = {
