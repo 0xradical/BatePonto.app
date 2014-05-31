@@ -14,5 +14,6 @@
 @property (weak) IBOutlet NSTableView *punchesList;
 
 - (IBAction)retrievePunches:(id)sender;
+- (IBAction)punch:(id)sender;
 
 @end

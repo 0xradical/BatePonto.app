@@ -54,6 +54,31 @@
     
 }
 
+- (IBAction)punch:(id)sender
+{
+    NSError *error;
+    
+    NSRRequest *request
+    = [[NSRRequest POST] routeTo:@"/api/punches"];
+    
+    // AuthorizationSettings.plist in Supporting Files
+    // Containing a KV pair "API Token" - "Value of API Token"
+    NSString *authSettingsFile = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"AuthorizationSettings.plist"];
+    
+    NSDictionary *authSettings = [NSDictionary dictionaryWithContentsOfFile:authSettingsFile];
+    
+    request.queryParameters = @{
+                                @"user_token": @"02c8957ff68e21b24ac46004a6a0790b",
+                                @"api_token": authSettings[@"API Token"]
+                                };
+    
+    request.body = @{@"punch":@{@"comment": @""}};
+    
+    id json = [request sendSynchronous:&error];
+    
+    NSLog(@"%@", json);
+}
+
 #pragma mark - Data Source Protocol
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
