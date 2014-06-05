@@ -26,6 +26,29 @@
     
 }
 
+- (void)awakeFromNib
+{
+    NSLog(@"Awaken from NIB");
+    
+    [self setStatusItem:[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength]];
+    
+    [[self statusItem] setMenu:[self menu]];
+    [[self statusItem] setTitle:@"Bate Ponto"];
+    [[self statusItem] setHighlightMode:YES];
+    [[self statusItem] setImage:[NSImage imageNamed:@"Clock"]];
+}
+
+- (IBAction)showWindow:(id)sender
+{
+    [NSApp activateIgnoringOtherApps:YES];
+    [[self window] makeKeyAndOrderFront:nil];
+}
+
+- (IBAction)quit:(id)sender
+{
+    [NSApp terminate:nil];
+}
+
 - (IBAction)retrievePunches:(id)sender
 {
     NSError *error;
@@ -72,7 +95,12 @@
                                 @"api_token": authSettings[@"API Token"]
                                 };
     
-    request.body = @{@"punch":@{@"comment": @""}};
+    request.body = @{
+                     @"punch":
+                         @{
+                             @"comment": [[self comment] stringValue]
+                             }
+                     };
     
     id json = [request sendSynchronous:&error];
     

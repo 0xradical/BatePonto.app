@@ -13,6 +13,8 @@
         </customObject>
         <customObject id="ExT-ja-Tlm" customClass="RAAppDelegate">
             <connections>
+                <outlet property="comment" destination="hud-4e-4BP" id="A2B-9C-q9j"/>
+                <outlet property="menu" destination="UVe-PX-I5o" id="Gzq-2Z-1SP"/>
                 <outlet property="punchesList" destination="aKc-Ka-4SI" id="LsB-rH-xmu"/>
                 <outlet property="window" destination="PN5-CQ-Tqx" id="ZD3-BU-KOp"/>
             </connections>
@@ -667,17 +669,17 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Bate Ponto" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="PN5-CQ-Tqx">
+        <window title="Bate Ponto" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="PN5-CQ-Tqx">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="109" y="132" width="488" height="241"/>
+            <rect key="contentRect" x="109" y="132" width="640" height="302"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="aIn-dk-3q0">
-                <rect key="frame" x="0.0" y="0.0" width="488" height="241"/>
+                <rect key="frame" x="0.0" y="0.0" width="640" height="302"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBU-AZ-fB6">
-                        <rect key="frame" x="245" y="13" width="146" height="32"/>
+                        <rect key="frame" x="315" y="13" width="146" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Retrieve Punches" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Msi-Nv-FGQ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -688,14 +690,14 @@
                         </connections>
                     </button>
                     <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6R-uA-XN9">
-                        <rect key="frame" x="20" y="56" width="448" height="165"/>
+                        <rect key="frame" x="20" y="55" width="435" height="227"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="8QG-bA-t3K">
-                            <rect key="frame" x="1" y="17" width="446" height="147"/>
+                            <rect key="frame" x="1" y="17" width="433" height="209"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="hGb-fP-b4c" id="aKc-Ka-4SI">
-                                    <rect key="frame" x="0.0" y="0.0" width="446" height="147"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="433" height="209"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -756,7 +758,7 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="comment" width="165" minWidth="10" maxWidth="3.4028234663852886e+38" id="UA6-PF-fXg">
+                                        <tableColumn identifier="comment" width="152" minWidth="10" maxWidth="3.4028234663852886e+38" id="UA6-PF-fXg">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Comment">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -786,12 +788,12 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="hGb-fP-b4c">
-                            <rect key="frame" x="0.0" y="0.0" width="446" height="17"/>
+                            <rect key="frame" x="0.0" y="0.0" width="433" height="17"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szH-7H-bv2">
-                        <rect key="frame" x="391" y="13" width="83" height="32"/>
+                        <rect key="frame" x="534" y="129" width="83" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Punch!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Bj-wN-ICk">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -801,8 +803,42 @@
                             <action selector="punch:" target="ExT-ja-Tlm" id="ECJ-lq-fVr"/>
                         </connections>
                     </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hud-4e-4BP">
+                        <rect key="frame" x="463" y="165" width="148" height="90"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="EzZ-GY-5Df">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QuD-NH-GcA">
+                        <rect key="frame" x="463" y="263" width="66" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Comment" id="bKf-Om-iqg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>
+        <menu id="UVe-PX-I5o">
+            <items>
+                <menuItem title="Show Window" id="u4I-SG-QwO">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showWindow:" target="ExT-ja-Tlm" id="TnY-4Y-32J"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" id="pJL-Qv-BxI">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="ExT-ja-Tlm" id="hwC-NE-tRh"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
     </objects>
 </document>
