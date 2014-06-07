@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 redealumni. All rights reserved.
 //
 
+// TODO: Try something like this:
+// http://shaheengandhi.com/using-nspopover-with-nsstatusitem/
+// https://github.com/shpakovski/Popup
+
 
 // Custom view to show a form inline
 // As an NSMenuItem, without breaking functionality

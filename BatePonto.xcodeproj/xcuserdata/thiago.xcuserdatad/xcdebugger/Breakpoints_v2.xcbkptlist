@@ -314,23 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BatePonto/Controllers/StatusBarItemController.m"
-            timestampString = "423798140.896359"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "-awakeFromNib"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BatePonto/Controllers/StatusBarItemController.m"
-            timestampString = "423811306.276137"
+            timestampString = "423832091.062677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -346,11 +330,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BatePonto/Controllers/StatusBarItemController.m"
-            timestampString = "423811307.315983"
+            timestampString = "423832091.062677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-awakeFromNib"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BatePonto/Controllers/StatusBarItemController.m"
+            timestampString = "423832091.062677"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-awakeFromNib"
             landmarkType = "5">
          </BreakpointContent>

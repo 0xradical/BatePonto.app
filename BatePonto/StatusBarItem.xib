@@ -8,12 +8,7 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application">
             <connections>
-                <outlet property="delegate" destination="ExT-ja-Tlm" id="tiD-Td-4y7"/>
-            </connections>
-        </customObject>
-        <customObject id="ExT-ja-Tlm" customClass="RAAppDelegate">
-            <connections>
-                <outlet property="statusBarController" destination="rIh-7J-SB9" id="28Z-w5-VZw"/>
+                <outlet property="delegate" destination="rIh-7J-SB9" id="URa-vg-XYH"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -26,6 +21,7 @@
         </customObject>
         <menu id="UVe-PX-I5o">
             <items>
+                <menuItem isSeparatorItem="YES" id="Jxw-nW-aIt"/>
                 <menuItem title="Quit" id="pJL-Qv-BxI">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -38,11 +34,11 @@
             </connections>
         </menu>
         <customView id="egx-Di-KZV">
-            <rect key="frame" x="0.0" y="0.0" width="189" height="113"/>
+            <rect key="frame" x="0.0" y="0.0" width="168" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eqi-DE-IMg">
-                    <rect key="frame" x="20" y="48" width="149" height="45"/>
+                    <rect key="frame" x="10" y="33" width="149" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Your comment here ..." drawsBackground="YES" id="R9y-9u-bIa">
                         <font key="font" metaFont="system"/>
@@ -51,7 +47,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSj-bc-aXf">
-                    <rect key="frame" x="92" y="12" width="83" height="32"/>
+                    <rect key="frame" x="82" y="-3" width="83" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Punch!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p6w-rg-hPR">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
