@@ -6,6 +6,12 @@
 //  Copyright (c) 2014 redealumni. All rights reserved.
 //
 
+
+// Custom view to show a form inline
+// As an NSMenuItem, without breaking functionality
+// It has to be custom to deal with app being
+// activated while the menu is ordered to be drawn
+// This logic can be only done through custom views
 #import "StatusBarItemView.h"
 
 // http://vocito.googlecode.com/svn/trunk/StatusItemView.m
