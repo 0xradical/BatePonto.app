@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class StatusBarItemView;
 
-@interface StatusBarItemController : NSObject
+@interface StatusBarItemController : NSObject <NSApplicationDelegate>
 
 // statusItem it has to be strongly
 // held by us because it is not strongly

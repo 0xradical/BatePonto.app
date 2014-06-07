@@ -12,10 +12,15 @@
 
 @implementation StatusBarItemController
 
-- (void)awakeFromNib
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    NSLog(@"StatusBarItemController awaken from nib");
+    NSRConfig *defaultConfig = [NSRConfig defaultConfig];
     
+    [defaultConfig setAppURL:@"http://localhost:3000"];
+}
+
+- (void)awakeFromNib
+{    
     NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
     [self setStatusItem:statusItem];
@@ -78,7 +83,13 @@
     
     id json = [request sendSynchronous:&error];
     
-    NSLog(@"%@", json);
+    if (error) {
+        
+        NSLog(@"%@", [error description]);
+    }
+    else {
+        NSLog(@"%@", json);   
+    }
 }
 
 - (IBAction)quit:(id)sender
