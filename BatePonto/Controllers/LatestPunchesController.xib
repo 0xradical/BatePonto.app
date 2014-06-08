@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="PunchesController">
+        <customObject id="-2" userLabel="File's Owner" customClass="LatestPunchesController">
             <connections>
                 <outlet property="punchesList" destination="MPe-4e-TLC" id="Qbs-hS-3pa"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="Ijl-JC-IKh"/>
@@ -83,7 +83,7 @@
                             <rect key="frame" x="1" y="1" width="0.0" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="37" horizontal="NO" id="TQY-0y-EBi">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="TQY-0y-EBi">
                             <rect key="frame" x="-15" y="17" width="16" height="0.0"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>

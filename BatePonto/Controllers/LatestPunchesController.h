@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface PunchesController : NSWindowController <NSTableViewDataSource>
+@interface LatestPunchesController : NSWindowController <NSTableViewDataSource>
 
 @property (weak) IBOutlet NSTableView *punchesList;
 

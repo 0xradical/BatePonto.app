@@ -7,18 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StatusBarItemViewDelegate.h"
+
 @class StatusBarItemView;
+@class PanelController;
 
-@interface StatusBarItemController : NSObject <NSApplicationDelegate>
+@interface StatusBarItemController : NSObject <NSApplicationDelegate, StatusBarItemViewDelegate>
 
-// statusItem it has to be strongly
-// held by us because it is not strongly
-// held by [NSStatusBar systemStatusBar]
-@property (strong) NSStatusItem *statusItem;   // NSStatusItem
-@property (strong) StatusBarItemView *itemView;
-@property (weak) IBOutlet NSMenu *menu;      // NSMenu
-@property (weak) IBOutlet NSView *punchForm; // NSMenuItem's view
-@property (weak) IBOutlet NSTextField *comment;
+@property (nonatomic) PanelController *panelController;
+@property (nonatomic, strong) StatusBarItemView *itemView;
 
 - (IBAction)punch:(id)sender;
 - (IBAction)quit:(id)sender;

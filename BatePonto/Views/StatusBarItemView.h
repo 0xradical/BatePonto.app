@@ -7,13 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class StatusBarItemController;
+#import "StatusBarItemViewDelegate.h"
 
-@interface StatusBarItemView : NSView <NSMenuDelegate>
+#define STATUS_ITEM_VIEW_WIDTH 24.0
+#define STATUS_ITEM_ICON_WIDTH 22.0
 
-@property (nonatomic, weak) StatusBarItemController *controller;
-@property (nonatomic, weak) NSStatusItem *statusItem;
-@property (nonatomic, weak) NSMenu *menu;
-@property (nonatomic, weak) NSImage *image;
+@interface StatusBarItemView : NSView
+
+@property (nonatomic, strong) NSStatusItem *statusItem;
+@property (nonatomic, setter = setHighlighted:) BOOL isHighlighted;
+@property (nonatomic, strong) NSImage *image;
+@property (nonatomic, readonly) NSRect globalRect;
+@property (nonatomic, weak) id<StatusBarItemViewDelegate> delegate;
+
+- (instancetype)initWithStatusItem;
 
 @end

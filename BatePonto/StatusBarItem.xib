@@ -14,9 +14,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="rIh-7J-SB9" customClass="StatusBarItemController">
             <connections>
-                <outlet property="comment" destination="Eqi-DE-IMg" id="N16-hh-CfI"/>
                 <outlet property="menu" destination="UVe-PX-I5o" id="MBY-Dz-dGp"/>
-                <outlet property="punchForm" destination="egx-Di-KZV" id="RTq-3R-QLg"/>
             </connections>
         </customObject>
         <menu id="UVe-PX-I5o">
@@ -33,31 +31,5 @@
                 <outlet property="delegate" destination="rIh-7J-SB9" id="kBK-jJ-pOu"/>
             </connections>
         </menu>
-        <customView id="egx-Di-KZV">
-            <rect key="frame" x="0.0" y="0.0" width="168" height="85"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eqi-DE-IMg">
-                    <rect key="frame" x="10" y="33" width="149" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Your comment here ..." drawsBackground="YES" id="R9y-9u-bIa">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSj-bc-aXf">
-                    <rect key="frame" x="82" y="-3" width="83" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Punch!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p6w-rg-hPR">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="punch:" target="rIh-7J-SB9" id="FGy-VE-fOP"/>
-                    </connections>
-                </button>
-            </subviews>
-        </customView>
     </objects>
 </document>

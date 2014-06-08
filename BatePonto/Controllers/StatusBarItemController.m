@@ -8,50 +8,26 @@
 
 #import "StatusBarItemController.h"
 #import "StatusBarItemView.h"
+#import "PanelController.h"
 #import "NSRails.h"
 
 @implementation StatusBarItemController
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    // NSRails App URL configuration
     NSRConfig *defaultConfig = [NSRConfig defaultConfig];
-    
     [defaultConfig setAppURL:@"http://localhost:3000"];
+    
+    // PanelController
+    if (![self panelController]) {
+        [self setPanelController:[[PanelController alloc] init]];
+    }
 }
 
 - (void)awakeFromNib
-{    
-    NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    
-    [self setStatusItem:statusItem];
-
-    // View setup
-    CGFloat itemWidth = 22.0;//[statusItem length] is returning -1 ? why ???;
-    CGFloat itemHeight = [[NSStatusBar systemStatusBar] thickness];
-    NSRect itemRect = NSMakeRect(0.0, 0.0, itemWidth, itemHeight);
-    StatusBarItemView *itemView = [[StatusBarItemView alloc] initWithFrame:itemRect];
-    
-    [itemView setController:self];
-    [itemView setStatusItem:statusItem];
-    [itemView setMenu:[self menu]];
-    [itemView setImage:[NSImage imageNamed:@"Clock"]];
-    
-    // when setView: is used, the view has
-    // the resposibility of drawing the
-    // NSStatusItem in the Status Bar
-    [[self statusItem] setView:itemView];
-
-    // Add punchForm to menu programatically
-    NSMenuItem *punchItem;
-
-    punchItem = [[NSMenuItem alloc] initWithTitle:@"Punch!"
-                                           action:NULL
-                                    keyEquivalent:@""];
-
-    [punchItem setView:[self punchForm]];
-    [punchItem setTarget:self];
-
-    [[self menu] insertItem:punchItem atIndex:0];
+{
+    [self setItemView:[[StatusBarItemView alloc] initWithStatusItem]];
 }
 
 #pragma mark - IBActions
@@ -95,6 +71,21 @@
 - (IBAction)quit:(id)sender
 {
     [NSApp terminate:nil];
+}
+
+#pragma mark - StatusBarItemViewDelegate protocol
+
+- (void)togglePanel:(id)sender
+{
+    [sender setHighlighted:![sender isHighlighted]];
+    
+    if ([sender isHighlighted]) {
+        [[self panelController] openPanel];
+    }
+    else {
+        [[self panelController] closePanel];
+    }
+    
 }
 
 @end

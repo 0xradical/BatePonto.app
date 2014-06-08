@@ -6,45 +6,31 @@
 //  Copyright (c) 2014 redealumni. All rights reserved.
 //
 
-// TODO: Try something like this:
-// http://shaheengandhi.com/using-nspopover-with-nsstatusitem/
-// https://github.com/shpakovski/Popup
+// Based off: https://github.com/shpakovski/Popup
+// Tried to use popover, but it's still too hacky!
 
-
-// Custom view to show a form inline
-// As an NSMenuItem, without breaking functionality
-// It has to be custom to deal with app being
-// activated while the menu is ordered to be drawn
-// This logic can be only done through custom views
 #import "StatusBarItemView.h"
-
-// http://vocito.googlecode.com/svn/trunk/StatusItemView.m
-// https://github.com/sstephenson/37signalsMenu/blob/master/StatusBarItemView.rb
-// http://undefinedvalue.com/2009/07/07/adding-custom-view-nsstatusitem
-
-@interface StatusBarItemView ()
-
-@property (nonatomic) BOOL active;
-@property (nonatomic) BOOL waitingForActivation;
-
-@end
 
 @implementation StatusBarItemView
 
-- (id)initWithFrame:(NSRect)frame
+- (instancetype)initWithStatusItem
 {
-    NSLog(@"Called initWithFrame for StatusBarItemView");
+    NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:STATUS_ITEM_VIEW_WIDTH];
     
-    self = [super initWithFrame:frame];
+    [statusItem setImage:[NSImage imageNamed:@"Clock"]];
+//    [statusItem setAction:@selector(togglePanel:)];
+    
+    CGFloat itemWidth = STATUS_ITEM_ICON_WIDTH;
+    CGFloat itemHeight = [[NSStatusBar systemStatusBar] thickness];
+    NSRect itemRect = NSMakeRect(0.0, 0.0, itemWidth, itemHeight);
+    
+    self = [super initWithFrame:itemRect];
     
     if (self) {
-        [self setActive:NO];
+        [self setStatusItem:statusItem];
+        [[self statusItem] setView:self];
     }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(applicationDidActivate:)
-                                                 name:NSApplicationDidBecomeActiveNotification
-                                               object:nil];
     return self;
 }
 
@@ -52,74 +38,58 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    NSLog(@"Drawing StatusBarItemView");
+    [[self statusItem] drawStatusBarBackgroundInRect:dirtyRect
+                                       withHighlight:[self isHighlighted]];
     
-    [[self statusItem] drawStatusBarBackgroundInRect:[self bounds]
-                                       withHighlight:[self active]];
+//    NSImage *icon = self.isHighlighted ? self.alternateImage : self.image;
+    NSSize iconSize = [[self image] size];
+    NSRect bounds = self.bounds;
+    CGFloat iconX = roundf((NSWidth(bounds) - iconSize.width) / 2);
+    CGFloat iconY = roundf((NSHeight(bounds) - iconSize.height) / 2);
+    NSPoint iconPoint = NSMakePoint(iconX, iconY);
     
-    if ([self image]) {
-        NSSize imageSize = [[self image] size];
-        NSRect imageRect = NSMakeRect(0, 0, imageSize.width, imageSize.height);
-        
-        [[self image] drawInRect:NSInsetRect([self bounds], 3, 3)
-                        fromRect:imageRect
-                       operation:NSCompositeSourceOver
-                        fraction:1.0f];
-    }
-    
-}
-
-- (void)setImage:(NSImage *)image
-{
-    _image = image;
-    
-    [self setNeedsDisplay:YES];
-}
-
-#pragma Custom Methods
-
-- (void)showMenu
-{
-    [[self menu] setDelegate:self];
-    [[self statusItem] popUpStatusItemMenu:[self menu]];
-    [self setNeedsDisplay:YES];
-}
-
-- (void)applicationDidActivate:(NSNotification *)aNotification
-{
-    NSLog(@"Application did activate");
-    if ([self waitingForActivation]) {
-        NSLog(@"Showing menu!");
-        [self setWaitingForActivation:NO];
-        [self showMenu];
-    }
+	[[self image] drawAtPoint:iconPoint
+                     fromRect:NSZeroRect
+                    operation:NSCompositeSourceOver
+                     fraction:1.0];
 }
 
 #pragma mark - User input events
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
-    if ([NSApp isActive]) {
-        [self showMenu];
-    } else {
-        [NSApp activateIgnoringOtherApps:YES];
-        [self setWaitingForActivation:YES];
+    if ([self delegate]) {
+        [[self delegate] performSelector:@selector(togglePanel:)
+                              withObject:self];
     }
 }
 
-#pragma mark - NSMenuDelegate protocol
+#pragma mark - Accessors
 
-- (void)menuWillOpen:(NSMenu *)menu
+- (void)setImage:(NSImage *)image
 {
-    [self setActive:YES];
-    [self setNeedsDisplay:YES];
+    if (_image != image) {
+        _image = image;
+        [self setNeedsDisplay:YES];
+    }
 }
 
-- (void)menuDidClose:(NSMenu *)menu
+- (void)setHighlighted:(BOOL)isHighlighted
 {
-    [self setActive:NO];
-    [[self menu] setDelegate:nil];
-    [self setNeedsDisplay:YES];
+    if (_isHighlighted == isHighlighted) {
+        return;
+    }
+    else {
+        _isHighlighted = isHighlighted;
+        [self setNeedsDisplay:YES];
+    }
+}
+
+#pragma mark - Custom Methods
+
+- (NSRect)globalRect
+{
+    return [self.window convertRectToScreen:[self frame]];
 }
 
 @end

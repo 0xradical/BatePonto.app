@@ -17,8 +17,8 @@
 		AF2A29D31934CCB000974D10 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF2A29D11934CCB000974D10 /* InfoPlist.strings */; };
 		AF2A29D51934CCB000974D10 /* BatePontoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A29D41934CCB000974D10 /* BatePontoTests.m */; };
 		AF43B3391940120F00917DE3 /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = AF43B3381940120F00917DE3 /* Clock.png */; };
-		AF66C5C41940E95600181DD8 /* PunchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5C21940E95600181DD8 /* PunchesController.m */; };
-		AF66C5C51940E95600181DD8 /* PunchesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF66C5C31940E95600181DD8 /* PunchesController.xib */; };
+		AF66C5C41940E95600181DD8 /* LatestPunchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5C21940E95600181DD8 /* LatestPunchesController.m */; };
+		AF66C5C51940E95600181DD8 /* LatestPunchesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF66C5C31940E95600181DD8 /* LatestPunchesController.xib */; };
 		AF66C5CD1942930800181DD8 /* StatusBarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5CC1942930800181DD8 /* StatusBarItemView.m */; };
 		AF66C5D31942964D00181DD8 /* StatusBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5D21942964D00181DD8 /* StatusBarItemController.m */; };
 		AF66C5D51942C55600181DD8 /* StatusBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF66C5D41942C55600181DD8 /* StatusBarItem.xib */; };
@@ -32,6 +32,10 @@
 		AFB5AA9E19394E9600BD1FC6 /* Punch.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA9B19394E9600BD1FC6 /* Punch.m */; };
 		AFB5AA9F19394E9600BD1FC6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA9D19394E9600BD1FC6 /* User.m */; };
 		AFB5AAA2193A204F00BD1FC6 /* AuthorizationSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB5AAA1193A204F00BD1FC6 /* AuthorizationSettings.plist */; };
+		AFD44D551943AE6500314688 /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD44D541943AE6500314688 /* Panel.xib */; };
+		AFD44D581943B25C00314688 /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD44D571943B25C00314688 /* PanelController.m */; };
+		AFD44D5E1943B34400314688 /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD44D5D1943B34400314688 /* PopupView.m */; };
+		AFD44D611943B36700314688 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD44D601943B36700314688 /* Panel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,14 +66,14 @@
 		AF2A29D21934CCB000974D10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AF2A29D41934CCB000974D10 /* BatePontoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatePontoTests.m; sourceTree = "<group>"; };
 		AF43B3381940120F00917DE3 /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
-		AF66C5C11940E95600181DD8 /* PunchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchesController.h; sourceTree = "<group>"; };
-		AF66C5C21940E95600181DD8 /* PunchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchesController.m; sourceTree = "<group>"; };
-		AF66C5C31940E95600181DD8 /* PunchesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PunchesController.xib; sourceTree = "<group>"; };
+		AF66C5C11940E95600181DD8 /* LatestPunchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatestPunchesController.h; sourceTree = "<group>"; };
+		AF66C5C21940E95600181DD8 /* LatestPunchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LatestPunchesController.m; sourceTree = "<group>"; };
+		AF66C5C31940E95600181DD8 /* LatestPunchesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LatestPunchesController.xib; path = ../Controllers/LatestPunchesController.xib; sourceTree = "<group>"; };
 		AF66C5CB1942930800181DD8 /* StatusBarItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarItemView.h; sourceTree = "<group>"; };
 		AF66C5CC1942930800181DD8 /* StatusBarItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarItemView.m; sourceTree = "<group>"; };
 		AF66C5D11942964D00181DD8 /* StatusBarItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarItemController.h; sourceTree = "<group>"; };
 		AF66C5D21942964D00181DD8 /* StatusBarItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarItemController.m; sourceTree = "<group>"; };
-		AF66C5D41942C55600181DD8 /* StatusBarItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusBarItem.xib; sourceTree = "<group>"; };
+		AF66C5D41942C55600181DD8 /* StatusBarItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StatusBarItem.xib; path = ../StatusBarItem.xib; sourceTree = "<group>"; };
 		AFB5AA8419394E0100BD1FC6 /* NSData+NSRBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NSRBase64.h"; sourceTree = "<group>"; };
 		AFB5AA8519394E0100BD1FC6 /* NSData+NSRBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NSRBase64.m"; sourceTree = "<group>"; };
 		AFB5AA8619394E0100BD1FC6 /* NSString+NSRInflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSRInflection.h"; sourceTree = "<group>"; };
@@ -89,6 +93,14 @@
 		AFB5AA9C19394E9600BD1FC6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		AFB5AA9D19394E9600BD1FC6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		AFB5AAA1193A204F00BD1FC6 /* AuthorizationSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AuthorizationSettings.plist; sourceTree = "<group>"; };
+		AFD44D541943AE6500314688 /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Panel.xib; sourceTree = "<group>"; };
+		AFD44D561943B25C00314688 /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelController.h; sourceTree = "<group>"; };
+		AFD44D571943B25C00314688 /* PanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelController.m; sourceTree = "<group>"; };
+		AFD44D5C1943B34400314688 /* PopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupView.h; sourceTree = "<group>"; };
+		AFD44D5D1943B34400314688 /* PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
+		AFD44D5F1943B36700314688 /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
+		AFD44D601943B36700314688 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
+		AFD44D6519449C2600314688 /* StatusBarItemViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarItemViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,12 +167,13 @@
 		AF2A29B01934CCB000974D10 /* BatePonto */ = {
 			isa = PBXGroup;
 			children = (
-				AF66C5D41942C55600181DD8 /* StatusBarItem.xib */,
-				AF66C5CA194292E200181DD8 /* Views */,
+				AFD44D6419449C1000314688 /* Protocols */,
 				AF66C5C01940E95600181DD8 /* Controllers */,
-				AFB5AA9919394E9600BD1FC6 /* Models */,
 				AF2A29C21934CCB000974D10 /* Images.xcassets */,
+				AFB5AA9919394E9600BD1FC6 /* Models */,
 				AF2A29B11934CCB000974D10 /* Supporting Files */,
+				AF66C5CA194292E200181DD8 /* Views */,
+				AFD44D531943ABCD00314688 /* XIBs */,
 			);
 			path = BatePonto;
 			sourceTree = "<group>";
@@ -200,11 +213,12 @@
 		AF66C5C01940E95600181DD8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF66C5C11940E95600181DD8 /* PunchesController.h */,
-				AF66C5C21940E95600181DD8 /* PunchesController.m */,
-				AF66C5C31940E95600181DD8 /* PunchesController.xib */,
+				AF66C5C11940E95600181DD8 /* LatestPunchesController.h */,
+				AF66C5C21940E95600181DD8 /* LatestPunchesController.m */,
 				AF66C5D11942964D00181DD8 /* StatusBarItemController.h */,
 				AF66C5D21942964D00181DD8 /* StatusBarItemController.m */,
+				AFD44D561943B25C00314688 /* PanelController.h */,
+				AFD44D571943B25C00314688 /* PanelController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +228,10 @@
 			children = (
 				AF66C5CB1942930800181DD8 /* StatusBarItemView.h */,
 				AF66C5CC1942930800181DD8 /* StatusBarItemView.m */,
+				AFD44D5C1943B34400314688 /* PopupView.h */,
+				AFD44D5D1943B34400314688 /* PopupView.m */,
+				AFD44D5F1943B36700314688 /* Panel.h */,
+				AFD44D601943B36700314688 /* Panel.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +274,24 @@
 				AFB5AA9D19394E9600BD1FC6 /* User.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AFD44D531943ABCD00314688 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				AF66C5C31940E95600181DD8 /* LatestPunchesController.xib */,
+				AF66C5D41942C55600181DD8 /* StatusBarItem.xib */,
+				AFD44D541943AE6500314688 /* Panel.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		AFD44D6419449C1000314688 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AFD44D6519449C2600314688 /* StatusBarItemViewDelegate.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +371,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF66C5C51940E95600181DD8 /* PunchesController.xib in Resources */,
+				AF66C5C51940E95600181DD8 /* LatestPunchesController.xib in Resources */,
 				AF43B3391940120F00917DE3 /* Clock.png in Resources */,
 				AF66C5D51942C55600181DD8 /* StatusBarItem.xib in Resources */,
+				AFD44D551943AE6500314688 /* Panel.xib in Resources */,
 				AF2A29B51934CCB000974D10 /* InfoPlist.strings in Resources */,
 				AFB5AA9419394E0100BD1FC6 /* license.md in Resources */,
 				AF2A29C31934CCB000974D10 /* Images.xcassets in Resources */,
@@ -361,13 +398,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD44D611943B36700314688 /* Panel.m in Sources */,
 				AF66C5D31942964D00181DD8 /* StatusBarItemController.m in Sources */,
 				AFB5AA9F19394E9600BD1FC6 /* User.m in Sources */,
 				AFB5AA9E19394E9600BD1FC6 /* Punch.m in Sources */,
+				AFD44D581943B25C00314688 /* PanelController.m in Sources */,
 				AFB5AA9819394E0100BD1FC6 /* NSRRequest.m in Sources */,
 				AF2A29B71934CCB000974D10 /* main.m in Sources */,
-				AF66C5C41940E95600181DD8 /* PunchesController.m in Sources */,
+				AF66C5C41940E95600181DD8 /* LatestPunchesController.m in Sources */,
 				AF66C5CD1942930800181DD8 /* StatusBarItemView.m in Sources */,
+				AFD44D5E1943B34400314688 /* PopupView.m in Sources */,
 				AFB5AA9719394E0100BD1FC6 /* NSRRemoteObject.m in Sources */,
 				AFB5AA9319394E0100BD1FC6 /* NSString+NSRInflection.m in Sources */,
 				AFB5AA9519394E0100BD1FC6 /* NSRConfig.m in Sources */,

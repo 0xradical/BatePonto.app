@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 redealumni. All rights reserved.
 //
 
-#import "PunchesController.h"
+#import "LatestPunchesController.h"
 #import "NSRails.h"
 #import "Punch.h"
 
-@interface PunchesController ()
+@interface LatestPunchesController ()
 
 @property (nonatomic) NSArray *punches;
 
 @end
 
-@implementation PunchesController
+@implementation LatestPunchesController
 
 - (instancetype)init
 
