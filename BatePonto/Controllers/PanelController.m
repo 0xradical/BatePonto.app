@@ -10,11 +10,12 @@
 #import "PanelControllerDelegate.h"
 #import "StatusBarItemView.h"
 #import "PopupView.h"
+#import "NSRails.h"
 
 #define OPEN_DURATION .15
 #define CLOSE_DURATION .1
 #define SEARCH_INSET 17
-#define POPUP_HEIGHT 122
+#define POPUP_HEIGHT 180
 #define PANEL_WIDTH 280
 #define MENU_ANIMATION_DURATION .1
 
@@ -49,12 +50,56 @@
     [panel setBackgroundColor:[NSColor clearColor]];
 }
 
-- (void)windowDidLoad
+#pragma mark - NSWindowDelegate
+
+- (void)windowWillClose:(NSNotification *)notification
 {
-    [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    [self closePanel];
 }
+
+- (void)windowDidResignKey:(NSNotification *)notification;
+{
+    if ([[self window] isVisible])
+    {
+        [self closePanel];
+    }
+}
+
+- (void)windowDidResize:(NSNotification *)notification
+{
+    NSWindow *panel = [self window];
+    NSRect statusRect = [self statusRectForWindow:panel];
+    NSRect panelRect = [panel frame];
+    
+    CGFloat statusX = roundf(NSMidX(statusRect));
+    CGFloat panelX = statusX - NSMinX(panelRect);
+    
+    [[self popupView] setArrowX:panelX];
+    
+    NSRect searchRect = [[self comment] frame];
+    
+    searchRect.size.width = NSWidth([[self popupView] bounds]) - SEARCH_INSET * 2;
+    searchRect.origin.x = SEARCH_INSET;
+    searchRect.origin.y = NSHeight([[self popupView] bounds]) - ARROW_HEIGHT - SEARCH_INSET - NSHeight(searchRect);
+    
+    if (NSIsEmptyRect(searchRect))
+    {
+        [[self comment] setHidden:YES];
+    }
+    else
+    {
+        [[self comment] setFrame:searchRect];
+        [[self comment] setHidden:NO];
+    }
+}
+
+#pragma mark - Keyboard
+
+- (void)cancelOperation:(id)sender
+{
+    [self closePanel];
+}
+
 
 - (NSRect)statusRectForWindow:(NSWindow *)window
 {
@@ -134,6 +179,10 @@
 
 - (void)closePanel
 {
+    StatusBarItemView *itemView = nil;
+    
+    itemView = [[self delegate] statusBarItemViewForPanelController:self];
+    
     [NSAnimationContext beginGrouping];
     [[NSAnimationContext currentContext] setDuration:CLOSE_DURATION];
     [[[self window] animator] setAlphaValue:0];
@@ -143,11 +192,46 @@
         
         [self.window orderOut:nil];
     });
+    
+    [itemView setHighlighted:NO];
+    
 }
 
 - (IBAction)punch:(id)sender
 {
+    NSError *error;
     
+    NSRRequest *request
+    = [[NSRRequest POST] routeTo:@"/api/punches"];
+    
+    // AuthorizationSettings.plist in Supporting Files
+    // Containing a KV pair "API Token" - "Value of API Token"
+    NSString *authSettingsFile = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"AuthorizationSettings.plist"];
+    
+    NSDictionary *authSettings = [NSDictionary dictionaryWithContentsOfFile:authSettingsFile];
+    
+    request.queryParameters = @{
+                                @"user_token": @"02c8957ff68e21b24ac46004a6a0790b",
+                                @"api_token": authSettings[@"API Token"]
+                                };
+    
+    request.body = @{
+                     @"punch":
+                         @{
+                             @"comment": [[self comment] stringValue]
+                             }
+                     };
+    
+    id json = [request sendSynchronous:&error];
+    
+    if (error) {
+        
+        NSLog(@"%@", [error description]);
+    }
+    else {
+        NSLog(@"%@", json);
+    }
 }
+
 
 @end

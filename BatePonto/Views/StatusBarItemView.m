@@ -17,9 +17,6 @@
 {
     NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:STATUS_ITEM_VIEW_WIDTH];
     
-    [statusItem setImage:[NSImage imageNamed:@"Clock"]];
-    [statusItem setView:self];
-    
     CGFloat itemWidth = STATUS_ITEM_ICON_WIDTH;
     CGFloat itemHeight = [[NSStatusBar systemStatusBar] thickness];
     NSRect itemRect = NSMakeRect(0.0, 0.0, itemWidth, itemHeight);
@@ -27,7 +24,9 @@
     self = [super initWithFrame:itemRect];
     
     if (self) {
+        [statusItem setView:self];
         [self setStatusItem:statusItem];
+        [self setImage:[NSImage imageNamed:@"Clock"]];
         [self setDelegate:delegate];
     }
     

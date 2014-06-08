@@ -7,6 +7,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
             <connections>
                 <outlet property="comment" destination="q7P-Ql-5gs" id="byn-Oo-rjq"/>
+                <outlet property="popupView" destination="jhM-Ar-8kn" id="gfc-g0-Bqo"/>
                 <outlet property="window" destination="ky2-CJ-UM1" id="Qry-6d-UGa"/>
             </connections>
         </customObject>

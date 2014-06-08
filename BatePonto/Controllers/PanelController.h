@@ -9,10 +9,13 @@
 #import <Cocoa/Cocoa.h>
 #import "PanelControllerDelegate.h"
 
+@class PopupView;
+
 @interface PanelController : NSWindowController
 
 @property (weak) IBOutlet NSTextField *comment;
 @property (nonatomic) id<PanelControllerDelegate> delegate;
+@property (weak) IBOutlet PopupView *popupView;
 
 - (instancetype)initWithDelegate:(id<PanelControllerDelegate>)delegate;
 - (void)openPanel;
