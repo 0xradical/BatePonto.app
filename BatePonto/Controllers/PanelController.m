@@ -7,6 +7,9 @@
 //
 
 #import "PanelController.h"
+#import "PanelControllerDelegate.h"
+#import "StatusBarItemView.h"
+#import "PopupView.h"
 
 #define OPEN_DURATION .15
 #define CLOSE_DURATION .1
@@ -22,9 +25,13 @@
 
 @implementation PanelController
 
-- (instancetype)init
+- (instancetype)initWithDelegate:(id<PanelControllerDelegate>)delegate
 {
     self = [super initWithWindowNibName:@"Panel"];
+    
+    if (self) {
+        [self setDelegate:delegate];
+    }
     
     return self;
 }
@@ -48,6 +55,32 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
+
+- (NSRect)statusRectForWindow:(NSWindow *)window
+{
+    NSRect screenRect = [[[NSScreen screens] objectAtIndex:0] frame];
+    NSRect statusRect = NSZeroRect;
+    
+    StatusBarItemView *itemView = nil;
+    
+    if ([self delegate]) {
+        itemView = [[self delegate] statusBarItemViewForPanelController:self];
+    }
+    
+    if (itemView)
+    {
+        statusRect = [itemView globalRect];
+        statusRect.origin.y = NSMinY(statusRect) - NSHeight(statusRect);
+    }
+    else
+    {
+        statusRect.size = NSMakeSize(STATUS_ITEM_VIEW_WIDTH, [[NSStatusBar systemStatusBar] thickness]);
+        statusRect.origin.x = roundf((NSWidth(screenRect) - NSWidth(statusRect)) / 2);
+        statusRect.origin.y = NSHeight(screenRect) - NSHeight(statusRect) * 2;
+    }
+    return statusRect;
+}
+
 
 - (void)openPanel
 {
@@ -95,7 +128,7 @@
     [NSAnimationContext endGrouping];
     
     [panel performSelector:@selector(makeFirstResponder:)
-                withObject:[self searchField]
+                withObject:[self comment]
                 afterDelay:openDuration];
 }
 
@@ -110,6 +143,11 @@
         
         [self.window orderOut:nil];
     });
+}
+
+- (IBAction)punch:(id)sender
+{
+    
 }
 
 @end

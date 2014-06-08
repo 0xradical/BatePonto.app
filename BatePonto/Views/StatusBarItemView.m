@@ -13,12 +13,12 @@
 
 @implementation StatusBarItemView
 
-- (instancetype)initWithStatusItem
+- (instancetype)initWithDelegate:(id<StatusBarItemViewDelegate>)delegate
 {
     NSStatusItem *statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:STATUS_ITEM_VIEW_WIDTH];
     
     [statusItem setImage:[NSImage imageNamed:@"Clock"]];
-//    [statusItem setAction:@selector(togglePanel:)];
+    [statusItem setView:self];
     
     CGFloat itemWidth = STATUS_ITEM_ICON_WIDTH;
     CGFloat itemHeight = [[NSStatusBar systemStatusBar] thickness];
@@ -28,7 +28,7 @@
     
     if (self) {
         [self setStatusItem:statusItem];
-        [[self statusItem] setView:self];
+        [self setDelegate:delegate];
     }
     
     return self;
@@ -89,7 +89,7 @@
 
 - (NSRect)globalRect
 {
-    return [self.window convertRectToScreen:[self frame]];
+    return [[self window] convertRectToScreen:[self frame]];
 }
 
 @end

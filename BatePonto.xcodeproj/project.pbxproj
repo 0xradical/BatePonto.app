@@ -101,6 +101,7 @@
 		AFD44D5F1943B36700314688 /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
 		AFD44D601943B36700314688 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
 		AFD44D6519449C2600314688 /* StatusBarItemViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarItemViewDelegate.h; sourceTree = "<group>"; };
+		AFD44D671944BA5D00314688 /* PanelControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				AFD44D6519449C2600314688 /* StatusBarItemViewDelegate.h */,
+				AFD44D671944BA5D00314688 /* PanelControllerDelegate.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";

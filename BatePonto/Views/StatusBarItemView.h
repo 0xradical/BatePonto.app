@@ -20,6 +20,6 @@
 @property (nonatomic, readonly) NSRect globalRect;
 @property (nonatomic, weak) id<StatusBarItemViewDelegate> delegate;
 
-- (instancetype)initWithStatusItem;
+- (instancetype)initWithDelegate:(id<StatusBarItemViewDelegate>)delegate;
 
 @end

@@ -21,13 +21,13 @@
     
     // PanelController
     if (![self panelController]) {
-        [self setPanelController:[[PanelController alloc] init]];
+        [self setPanelController:[[PanelController alloc] initWithDelegate:self]];
     }
 }
 
 - (void)awakeFromNib
 {
-    [self setItemView:[[StatusBarItemView alloc] initWithStatusItem]];
+    [self setItemView:[[StatusBarItemView alloc] initWithDelegate:self]];
 }
 
 #pragma mark - IBActions
@@ -86,6 +86,13 @@
         [[self panelController] closePanel];
     }
     
+}
+
+#pragma mark - PanelControllerDelegate protocol
+
+- (StatusBarItemView *)statusBarItemViewForPanelController:(id)sender
+{
+    return [self itemView];
 }
 
 @end

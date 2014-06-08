@@ -6,6 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
             <connections>
+                <outlet property="comment" destination="q7P-Ql-5gs" id="byn-Oo-rjq"/>
                 <outlet property="window" destination="ky2-CJ-UM1" id="Qry-6d-UGa"/>
             </connections>
         </customObject>
@@ -37,6 +38,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="punch:" target="-2" id="UQU-kv-TdL"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

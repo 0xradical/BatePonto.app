@@ -7,10 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PanelControllerDelegate.h"
 
 @interface PanelController : NSWindowController
 
+@property (weak) IBOutlet NSTextField *comment;
+@property (nonatomic) id<PanelControllerDelegate> delegate;
+
+- (instancetype)initWithDelegate:(id<PanelControllerDelegate>)delegate;
 - (void)openPanel;
 - (void)closePanel;
+
+- (IBAction)punch:(id)sender;
 
 @end

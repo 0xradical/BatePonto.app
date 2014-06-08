@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "StatusBarItemViewDelegate.h"
+#import "PanelControllerDelegate.h"
 
 @class StatusBarItemView;
 @class PanelController;
 
-@interface StatusBarItemController : NSObject <NSApplicationDelegate, StatusBarItemViewDelegate>
+@interface StatusBarItemController : NSObject <NSApplicationDelegate, StatusBarItemViewDelegate, PanelControllerDelegate>
 
 @property (nonatomic) PanelController *panelController;
 @property (nonatomic, strong) StatusBarItemView *itemView;
 
-- (IBAction)punch:(id)sender;
 - (IBAction)quit:(id)sender;
 
 @end
