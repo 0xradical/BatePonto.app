@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSStatusItem *statusItem;
 @property (nonatomic, setter = setHighlighted:) BOOL isHighlighted;
 @property (nonatomic, strong) NSImage *image;
+@property (nonatomic, strong) NSImage *alternateImage;
 @property (nonatomic, readonly) NSRect globalRect;
 @property (nonatomic, weak) id<StatusBarItemViewDelegate> delegate;
 

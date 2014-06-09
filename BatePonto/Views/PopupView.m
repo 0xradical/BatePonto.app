@@ -8,10 +8,10 @@
 
 #import "PopupView.h"
 
-#define FILL_OPACITY 0.9f
+#define FILL_OPACITY 1.0f
 #define STROKE_OPACITY 1.0f
 #define LINE_THICKNESS 1.0f
-#define CORNER_RADIUS 6.0f
+#define CORNER_RADIUS 7.0f
 #define SEARCH_INSET 10.0f
 
 @implementation PopupView

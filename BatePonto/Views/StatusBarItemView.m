@@ -27,6 +27,7 @@
         [statusItem setView:self];
         [self setStatusItem:statusItem];
         [self setImage:[NSImage imageNamed:@"Clock"]];
+        [self setAlternateImage:[NSImage imageNamed:@"ClockInverted"]];
         [self setDelegate:delegate];
     }
     
@@ -40,17 +41,17 @@
     [[self statusItem] drawStatusBarBackgroundInRect:dirtyRect
                                        withHighlight:[self isHighlighted]];
     
-//    NSImage *icon = self.isHighlighted ? self.alternateImage : self.image;
-    NSSize iconSize = [[self image] size];
-    NSRect bounds = self.bounds;
+    NSImage *icon = [self isHighlighted] ? [self alternateImage] : [self image];
+    NSSize iconSize = [icon size];
+    NSRect bounds = [self bounds];
     CGFloat iconX = roundf((NSWidth(bounds) - iconSize.width) / 2);
     CGFloat iconY = roundf((NSHeight(bounds) - iconSize.height) / 2);
     NSPoint iconPoint = NSMakePoint(iconX, iconY);
     
-	[[self image] drawAtPoint:iconPoint
-                     fromRect:NSZeroRect
-                    operation:NSCompositeSourceOver
-                     fraction:1.0];
+	[icon drawAtPoint:iconPoint
+             fromRect:NSZeroRect
+            operation:NSCompositeSourceOver
+             fraction:1.0];
 }
 
 #pragma mark - User input events
@@ -72,6 +73,15 @@
         [self setNeedsDisplay:YES];
     }
 }
+
+- (void)setAlternateImage:(NSImage *)alternateImage
+{
+    if (_alternateImage != alternateImage) {
+        _alternateImage = alternateImage;
+        [self setNeedsDisplay:YES];
+    }
+}
+
 
 - (void)setHighlighted:(BOOL)isHighlighted
 {

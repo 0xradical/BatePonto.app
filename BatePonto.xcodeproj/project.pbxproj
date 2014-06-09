@@ -18,6 +18,7 @@
 		AF2A29D51934CCB000974D10 /* BatePontoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A29D41934CCB000974D10 /* BatePontoTests.m */; };
 		AF420EDA1944DE0000FBC1C1 /* LatestPunchesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF420ED81944DE0000FBC1C1 /* LatestPunchesController.xib */; };
 		AF420EDB1944DE0000FBC1C1 /* StatusBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF420ED91944DE0000FBC1C1 /* StatusBarItem.xib */; };
+		AF420EDD19453ADE00FBC1C1 /* ClockInverted.png in Resources */ = {isa = PBXBuildFile; fileRef = AF420EDC19453ADE00FBC1C1 /* ClockInverted.png */; };
 		AF43B3391940120F00917DE3 /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = AF43B3381940120F00917DE3 /* Clock.png */; };
 		AF66C5C41940E95600181DD8 /* LatestPunchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5C21940E95600181DD8 /* LatestPunchesController.m */; };
 		AF66C5CD1942930800181DD8 /* StatusBarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5CC1942930800181DD8 /* StatusBarItemView.m */; };
@@ -67,6 +68,7 @@
 		AF2A29D41934CCB000974D10 /* BatePontoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatePontoTests.m; sourceTree = "<group>"; };
 		AF420ED81944DE0000FBC1C1 /* LatestPunchesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LatestPunchesController.xib; sourceTree = "<group>"; };
 		AF420ED91944DE0000FBC1C1 /* StatusBarItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusBarItem.xib; sourceTree = "<group>"; };
+		AF420EDC19453ADE00FBC1C1 /* ClockInverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClockInverted.png; sourceTree = "<group>"; };
 		AF43B3381940120F00917DE3 /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
 		AF66C5C11940E95600181DD8 /* LatestPunchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatestPunchesController.h; sourceTree = "<group>"; };
 		AF66C5C21940E95600181DD8 /* LatestPunchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LatestPunchesController.m; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		AF2A29B11934CCB000974D10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF420EDC19453ADE00FBC1C1 /* ClockInverted.png */,
 				AF43B3381940120F00917DE3 /* Clock.png */,
 				AF2A29B21934CCB000974D10 /* BatePonto-Info.plist */,
 				AF2A29B31934CCB000974D10 /* InfoPlist.strings */,
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF43B3391940120F00917DE3 /* Clock.png in Resources */,
+				AF420EDD19453ADE00FBC1C1 /* ClockInverted.png in Resources */,
 				AFD44D551943AE6500314688 /* Panel.xib in Resources */,
 				AF2A29B51934CCB000974D10 /* InfoPlist.strings in Resources */,
 				AF420EDA1944DE0000FBC1C1 /* LatestPunchesController.xib in Resources */,

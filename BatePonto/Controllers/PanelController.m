@@ -76,21 +76,21 @@
     
     [[self popupView] setArrowX:panelX];
     
-    NSRect searchRect = [[self comment] frame];
-    
-    searchRect.size.width = NSWidth([[self popupView] bounds]) - SEARCH_INSET * 2;
-    searchRect.origin.x = SEARCH_INSET;
-    searchRect.origin.y = NSHeight([[self popupView] bounds]) - ARROW_HEIGHT - SEARCH_INSET - NSHeight(searchRect);
-    
-    if (NSIsEmptyRect(searchRect))
-    {
-        [[self comment] setHidden:YES];
-    }
-    else
-    {
-        [[self comment] setFrame:searchRect];
-        [[self comment] setHidden:NO];
-    }
+//    NSRect commentRect = [[self comment] frame];
+//    
+//    commentRect.size.width = NSWidth([[self popupView] bounds]) - SEARCH_INSET * 2;
+//    commentRect.origin.x = SEARCH_INSET;
+//    commentRect.origin.y = NSHeight([[self popupView] bounds]) - ARROW_HEIGHT - SEARCH_INSET - NSHeight(commentRect);
+//    
+//    if (NSIsEmptyRect(commentRect))
+//    {
+//        [[self comment] setHidden:YES];
+//    }
+//    else
+//    {
+//        [[self comment] setFrame:commentRect];
+//        [[self comment] setHidden:NO];
+//    }
 }
 
 #pragma mark - Keyboard
