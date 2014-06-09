@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="comment" destination="q7P-Ql-5gs" id="byn-Oo-rjq"/>
                 <outlet property="popupView" destination="jhM-Ar-8kn" id="gfc-g0-Bqo"/>
+                <outlet property="serverMessage" destination="5BN-iA-GKd" id="kAX-yt-K0Y"/>
                 <outlet property="window" destination="ky2-CJ-UM1" id="Qry-6d-UGa"/>
             </connections>
         </customObject>
@@ -43,6 +44,15 @@
                             <action selector="punch:" target="-2" id="UQU-kv-TdL"/>
                         </connections>
                     </button>
+                    <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5BN-iA-GKd">
+                        <rect key="frame" x="69" y="6" width="151" height="48"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="Sgt-ae-iUF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <connections>

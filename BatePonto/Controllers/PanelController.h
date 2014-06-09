@@ -14,6 +14,8 @@
 @interface PanelController : NSWindowController
 
 @property (weak) IBOutlet NSTextField *comment;
+@property (weak) IBOutlet NSTextField *serverMessage;
+
 @property (nonatomic) id<PanelControllerDelegate> delegate;
 @property (weak) IBOutlet PopupView *popupView;
 

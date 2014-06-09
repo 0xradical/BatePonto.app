@@ -199,6 +199,8 @@
 
 - (IBAction)punch:(id)sender
 {
+    [sender setEnabled:NO];
+    
     NSError *error;
     
     NSRRequest *request
@@ -222,15 +224,18 @@
                              }
                      };
     
-    id json = [request sendSynchronous:&error];
+    __unused id json = [request sendSynchronous:&error];
     
     if (error) {
-        
-        NSLog(@"%@", [error description]);
+        [[self serverMessage] setStringValue:[NSString stringWithFormat:@"Error: %@", [error localizedDescription]]];
     }
     else {
-        NSLog(@"%@", json);
+//        NSLog(@"%@", json);
+        [[self serverMessage] setStringValue:@"Punched successfully!"];
     }
+    
+    [[self serverMessage] setHidden:NO];
+    [sender setEnabled:YES];
 }
 
 
