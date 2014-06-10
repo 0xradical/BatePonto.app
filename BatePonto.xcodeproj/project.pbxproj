@@ -18,8 +18,6 @@
 		AF2A29D51934CCB000974D10 /* BatePontoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A29D41934CCB000974D10 /* BatePontoTests.m */; };
 		AF420EDA1944DE0000FBC1C1 /* LatestPunchesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF420ED81944DE0000FBC1C1 /* LatestPunchesController.xib */; };
 		AF420EDB1944DE0000FBC1C1 /* StatusBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF420ED91944DE0000FBC1C1 /* StatusBarItem.xib */; };
-		AF420EDD19453ADE00FBC1C1 /* ClockInverted.png in Resources */ = {isa = PBXBuildFile; fileRef = AF420EDC19453ADE00FBC1C1 /* ClockInverted.png */; };
-		AF43B3391940120F00917DE3 /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = AF43B3381940120F00917DE3 /* Clock.png */; };
 		AF66C5C41940E95600181DD8 /* LatestPunchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5C21940E95600181DD8 /* LatestPunchesController.m */; };
 		AF66C5CD1942930800181DD8 /* StatusBarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5CC1942930800181DD8 /* StatusBarItemView.m */; };
 		AF66C5D31942964D00181DD8 /* StatusBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5D21942964D00181DD8 /* StatusBarItemController.m */; };
@@ -37,6 +35,10 @@
 		AFD44D581943B25C00314688 /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD44D571943B25C00314688 /* PanelController.m */; };
 		AFD44D5E1943B34400314688 /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD44D5D1943B34400314688 /* PopupView.m */; };
 		AFD44D611943B36700314688 /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD44D601943B36700314688 /* Panel.m */; };
+		AFD5A7DE19469AA1003D763E /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD5A7DA19469AA1003D763E /* Clock.png */; };
+		AFD5A7DF19469AA1003D763E /* ClockInverted.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD5A7DB19469AA1003D763E /* ClockInverted.png */; };
+		AFD5A7E019469AA1003D763E /* Punch.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD5A7DC19469AA1003D763E /* Punch.png */; };
+		AFD5A7E71946A0BD003D763E /* PunchButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD5A7E61946A0BD003D763E /* PunchButtonCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +70,6 @@
 		AF2A29D41934CCB000974D10 /* BatePontoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatePontoTests.m; sourceTree = "<group>"; };
 		AF420ED81944DE0000FBC1C1 /* LatestPunchesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LatestPunchesController.xib; sourceTree = "<group>"; };
 		AF420ED91944DE0000FBC1C1 /* StatusBarItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusBarItem.xib; sourceTree = "<group>"; };
-		AF420EDC19453ADE00FBC1C1 /* ClockInverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClockInverted.png; sourceTree = "<group>"; };
-		AF43B3381940120F00917DE3 /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
 		AF66C5C11940E95600181DD8 /* LatestPunchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatestPunchesController.h; sourceTree = "<group>"; };
 		AF66C5C21940E95600181DD8 /* LatestPunchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LatestPunchesController.m; sourceTree = "<group>"; };
 		AF66C5CB1942930800181DD8 /* StatusBarItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarItemView.h; sourceTree = "<group>"; };
@@ -104,6 +104,11 @@
 		AFD44D601943B36700314688 /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
 		AFD44D6519449C2600314688 /* StatusBarItemViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarItemViewDelegate.h; sourceTree = "<group>"; };
 		AFD44D671944BA5D00314688 /* PanelControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelControllerDelegate.h; sourceTree = "<group>"; };
+		AFD5A7DA19469AA1003D763E /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
+		AFD5A7DB19469AA1003D763E /* ClockInverted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClockInverted.png; sourceTree = "<group>"; };
+		AFD5A7DC19469AA1003D763E /* Punch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Punch.png; sourceTree = "<group>"; };
+		AFD5A7E51946A0BD003D763E /* PunchButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchButtonCell.h; sourceTree = "<group>"; };
+		AFD5A7E61946A0BD003D763E /* PunchButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchButtonCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +175,7 @@
 		AF2A29B01934CCB000974D10 /* BatePonto */ = {
 			isa = PBXGroup;
 			children = (
+				AFD5A7D919469AA1003D763E /* Assets */,
 				AFD44D6419449C1000314688 /* Protocols */,
 				AF66C5C01940E95600181DD8 /* Controllers */,
 				AF2A29C21934CCB000974D10 /* Images.xcassets */,
@@ -184,8 +190,6 @@
 		AF2A29B11934CCB000974D10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF420EDC19453ADE00FBC1C1 /* ClockInverted.png */,
-				AF43B3381940120F00917DE3 /* Clock.png */,
 				AF2A29B21934CCB000974D10 /* BatePonto-Info.plist */,
 				AF2A29B31934CCB000974D10 /* InfoPlist.strings */,
 				AF2A29B61934CCB000974D10 /* main.m */,
@@ -236,6 +240,8 @@
 				AFD44D5D1943B34400314688 /* PopupView.m */,
 				AFD44D5F1943B36700314688 /* Panel.h */,
 				AFD44D601943B36700314688 /* Panel.m */,
+				AFD5A7E51946A0BD003D763E /* PunchButtonCell.h */,
+				AFD5A7E61946A0BD003D763E /* PunchButtonCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +303,16 @@
 				AFD44D671944BA5D00314688 /* PanelControllerDelegate.h */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AFD5A7D919469AA1003D763E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AFD5A7DA19469AA1003D763E /* Clock.png */,
+				AFD5A7DB19469AA1003D763E /* ClockInverted.png */,
+				AFD5A7DC19469AA1003D763E /* Punch.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,15 +392,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF43B3391940120F00917DE3 /* Clock.png in Resources */,
-				AF420EDD19453ADE00FBC1C1 /* ClockInverted.png in Resources */,
 				AFD44D551943AE6500314688 /* Panel.xib in Resources */,
+				AFD5A7DF19469AA1003D763E /* ClockInverted.png in Resources */,
 				AF2A29B51934CCB000974D10 /* InfoPlist.strings in Resources */,
+				AFD5A7E019469AA1003D763E /* Punch.png in Resources */,
 				AF420EDA1944DE0000FBC1C1 /* LatestPunchesController.xib in Resources */,
 				AFB5AA9419394E0100BD1FC6 /* license.md in Resources */,
 				AF420EDB1944DE0000FBC1C1 /* StatusBarItem.xib in Resources */,
 				AF2A29C31934CCB000974D10 /* Images.xcassets in Resources */,
 				AFB5AAA2193A204F00BD1FC6 /* AuthorizationSettings.plist in Resources */,
+				AFD5A7DE19469AA1003D763E /* Clock.png in Resources */,
 				AF2A29BB1934CCB000974D10 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +427,7 @@
 				AFB5AA9E19394E9600BD1FC6 /* Punch.m in Sources */,
 				AFD44D581943B25C00314688 /* PanelController.m in Sources */,
 				AFB5AA9819394E0100BD1FC6 /* NSRRequest.m in Sources */,
+				AFD5A7E71946A0BD003D763E /* PunchButtonCell.m in Sources */,
 				AF2A29B71934CCB000974D10 /* main.m in Sources */,
 				AF66C5C41940E95600181DD8 /* LatestPunchesController.m in Sources */,
 				AF66C5CD1942930800181DD8 /* StatusBarItemView.m in Sources */,
