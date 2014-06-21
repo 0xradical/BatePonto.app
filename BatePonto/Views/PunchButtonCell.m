@@ -12,7 +12,13 @@
 
 - (void)awakeFromNib
 {
-    [super setHighlightsBy:NSChangeGrayCellMask];
+    // it didn't work for some reason :(
+//    [self setHighlightsBy:NSChangeBackgroundCellMask];
+//    [self setShowsStateBy:NSChangeGrayCellMask | NSChangeBackgroundCellMask];
+//    [super awakeFromNib];
+    
+//    [self setAlternateImage:[NSImage imageNamed:@"PunchWithPow"]];
+    
 }
 
 @end

@@ -76,21 +76,6 @@
     
     [[self popupView] setArrowX:panelX];
     
-//    NSRect commentRect = [[self comment] frame];
-//    
-//    commentRect.size.width = NSWidth([[self popupView] bounds]) - SEARCH_INSET * 2;
-//    commentRect.origin.x = SEARCH_INSET;
-//    commentRect.origin.y = NSHeight([[self popupView] bounds]) - ARROW_HEIGHT - SEARCH_INSET - NSHeight(commentRect);
-//    
-//    if (NSIsEmptyRect(commentRect))
-//    {
-//        [[self comment] setHidden:YES];
-//    }
-//    else
-//    {
-//        [[self comment] setFrame:commentRect];
-//        [[self comment] setHidden:NO];
-//    }
 }
 
 #pragma mark - Keyboard
@@ -199,7 +184,7 @@
 
 - (IBAction)punch:(id)sender
 {
-    [sender setEnabled:NO];
+//    [sender setEnabled:NO];
     
     NSError *error;
     
@@ -235,7 +220,7 @@
     }
     
     [[self serverMessage] setHidden:NO];
-    [sender setEnabled:YES];
+//    [sender setEnabled:YES];
 }
 
 
