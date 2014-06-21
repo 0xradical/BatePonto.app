@@ -45,7 +45,7 @@
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cLf-uQ-g5C">
                         <rect key="frame" x="211" y="102" width="64" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="PunchWithoutPow" imagePosition="only" alignment="center" alternateImage="PunchWithPow" state="on" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="DOT-em-Gnb" customClass="PunchButtonCell">
+                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="PunchWithoutPow" imagePosition="only" alignment="center" alternateImage="PunchWithPow" state="on" borderStyle="border" imageScaling="proportionallyUpOrDown" sound="Punch" inset="2" id="DOT-em-Gnb" customClass="PunchButtonCell">
                             <behavior key="behavior" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -63,5 +63,6 @@
     <resources>
         <image name="PunchWithPow" width="80" height="60"/>
         <image name="PunchWithoutPow" width="80" height="60"/>
+        <sound name="Punch"/>
     </resources>
 </document>

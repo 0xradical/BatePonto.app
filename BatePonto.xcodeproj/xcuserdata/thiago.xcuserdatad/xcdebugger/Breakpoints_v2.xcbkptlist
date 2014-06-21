@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BatePonto/Views/PunchButtonCell.m"
-            timestampString = "425011031.07837"
+            timestampString = "425011774.185748"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "-awakeFromNib"
             landmarkType = "5">
          </BreakpointContent>
