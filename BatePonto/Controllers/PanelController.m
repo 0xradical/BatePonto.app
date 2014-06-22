@@ -216,10 +216,16 @@
         else {
             [[self serverMessage] setStringValue:@"Punched successfully!"];
         }
+        
+        [[self serverMessage] setHidden:NO];
+        [[self comment] setStringValue:@""];
     }];
 
-    [[self serverMessage] setHidden:NO];
 }
 
+- (IBAction)comment:(id)sender
+{
+    [[self punchButton] performClick:nil];
+}
 
 @end

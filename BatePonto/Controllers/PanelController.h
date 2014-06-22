@@ -15,6 +15,7 @@
 
 @property (weak) IBOutlet NSTextField *comment;
 @property (weak) IBOutlet NSTextField *serverMessage;
+@property (weak) IBOutlet NSButton *punchButton;
 
 @property (nonatomic) id<PanelControllerDelegate> delegate;
 @property (weak) IBOutlet PopupView *popupView;
@@ -24,5 +25,6 @@
 - (void)closePanel;
 
 - (IBAction)punch:(id)sender;
+- (IBAction)comment:(id)sender;
 
 @end

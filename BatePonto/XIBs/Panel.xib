@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="comment" destination="q7P-Ql-5gs" id="byn-Oo-rjq"/>
                 <outlet property="popupView" destination="jhM-Ar-8kn" id="gfc-g0-Bqo"/>
+                <outlet property="punchButton" destination="cLf-uQ-g5C" id="kA8-Xf-Bxf"/>
                 <outlet property="serverMessage" destination="5BN-iA-GKd" id="kAX-yt-K0Y"/>
                 <outlet property="window" destination="ky2-CJ-UM1" id="Qry-6d-UGa"/>
             </connections>
@@ -27,11 +28,14 @@
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7P-Ql-5gs">
                         <rect key="frame" x="20" y="105" width="183" height="55"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Your comment here ..." drawsBackground="YES" id="Doz-ua-kga">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Your comment here ..." drawsBackground="YES" id="Doz-ua-kga">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <action selector="comment:" target="-2" id="dgJ-Sl-X36"/>
+                        </connections>
                     </textField>
                     <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5BN-iA-GKd">
                         <rect key="frame" x="18" y="52" width="251" height="45"/>
