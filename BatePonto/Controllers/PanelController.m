@@ -10,7 +10,6 @@
 #import "PanelControllerDelegate.h"
 #import "StatusBarItemView.h"
 #import "PopupView.h"
-#import "NSRails.h"
 
 #define OPEN_DURATION .15
 #define CLOSE_DURATION .1
@@ -21,7 +20,9 @@
 
 @interface PanelController ()
 
+@property (nonatomic) NSHTTPURLResponse *punchResponse;
 @property (nonatomic) NSMutableData *punchResponseData;
+@property (nonatomic) id punchResponseJSON;
 
 @end
 
@@ -242,32 +243,6 @@
     
     [NSURLConnection connectionWithRequest:request delegate:self];    
 
-//    __unused __block id json;
-//    
-//    [request sendAsynchronous:^(id jsonRep, NSError *error) {
-//        json = jsonRep;
-//        NSString *errorMessage;
-//        
-//        if (error) {
-//            switch ([error code]) {
-//                case NSURLErrorUserCancelledAuthentication:
-//                    errorMessage = @"Unauthorized";
-//                    break;
-//                    
-//                default:
-//                    errorMessage = [error localizedDescription];
-//                    break;
-//            }
-//            [[self serverMessage] setStringValue:[NSString stringWithFormat:@"Error: %@", jsonRep]];
-//        }
-//        else {
-//            [[self serverMessage] setStringValue:@"Punched successfully!"];
-//        }
-//        
-//        [[self serverMessage] setHidden:NO];
-//        [[self comment] setStringValue:@""];
-//    }];
-
 }
 
 - (IBAction)comment:(id)sender
@@ -277,15 +252,21 @@
 
 #pragma mark NSURLConnection Delegate Methods
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+- (void)connection:(NSURLConnection *)connection
+didReceiveResponse:(NSHTTPURLResponse *)response
+{
     // A response has been received, this is where we initialize the instance var you created
     // so that we can append data to it in the didReceiveData method
     // Furthermore, this method is called each time there is a redirect so reinitializing it
     // also serves to clear it
+    _punchResponse     = response;
     _punchResponseData = [[NSMutableData alloc] init];
+    _punchResponseJSON = nil;
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+- (void)connection:(NSURLConnection *)connection
+    didReceiveData:(NSData *)data
+{
     // Append the new data to the instance variable you declared
     [_punchResponseData appendData:data];
 }
@@ -299,12 +280,51 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // The request is complete and data has been received
     // You can parse the stuff in your instance variable now
+    if (!_punchResponseData)
+    {
+        _punchResponseJSON = nil;
+        return;
+    }
+    
+    NSError *desserializationError;
+    
+	_punchResponseJSON = [NSJSONSerialization JSONObjectWithData:_punchResponseData
+                                                         options:NSJSONReadingAllowFragments
+                                                           error:&desserializationError];
+
+	if (desserializationError)
+		_punchResponseJSON = [[NSString alloc] initWithData:_punchResponseData
+                                                   encoding:NSUTF8StringEncoding];
+    
+    if (_punchResponse.statusCode >= 0 && _punchResponse.statusCode < 400) {
+        [[self serverMessage] setStringValue:@"Punched successfully!"];
+    } else {
+        NSString *errorMessage;
+        
+        switch (_punchResponse.statusCode) {
+            case 401:
+                errorMessage = @"Unauthorized (401)";
+                break;
+                
+            default:
+                errorMessage = [NSString stringWithFormat:@"Code %@", @(_punchResponse.statusCode)];
+                break;
+        }
+        [[self serverMessage] setStringValue:[NSString stringWithFormat:@"Error: %@", errorMessage]];
+    }
+    
+    [[self serverMessage] setHidden:NO];
+    [[self comment] setStringValue:@""];
     
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+- (void)connection:(NSURLConnection *)connection
+  didFailWithError:(NSError *)error
+{
     // The request has failed for some reason!
     // Check the error var
+    [[self serverMessage] setStringValue:[NSString stringWithFormat:@"Error: %@", [error localizedDescription]]];
+    [[self serverMessage] setHidden:NO];
 }
 
 @end

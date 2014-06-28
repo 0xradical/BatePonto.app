@@ -18,6 +18,6 @@
 @property (nonatomic) PanelController *panelController;
 @property (nonatomic, strong) StatusBarItemView *itemView;
 
-- (IBAction)quit:(id)sender;
+//- (IBAction)quit:(id)sender;
 
 @end

@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 thiago. All rights reserved.
 //
 
-#import "NSRails.h"
-
 @interface User : NSObject
 
 @property (nonatomic) NSMutableArray *punches;

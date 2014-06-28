@@ -19,9 +19,7 @@
 		AF3E29D619551F0F0081D934 /* PunchWithoutPow.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3E29D419551F0F0081D934 /* PunchWithoutPow.png */; };
 		AF3E29D719551F0F0081D934 /* PunchWithPow.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3E29D519551F0F0081D934 /* PunchWithPow.png */; };
 		AF3E29D919552A2B0081D934 /* Punch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF3E29D819552A2B0081D934 /* Punch.mp3 */; };
-		AF420EDA1944DE0000FBC1C1 /* LatestPunchesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF420ED81944DE0000FBC1C1 /* LatestPunchesController.xib */; };
 		AF420EDB1944DE0000FBC1C1 /* StatusBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF420ED91944DE0000FBC1C1 /* StatusBarItem.xib */; };
-		AF66C5C41940E95600181DD8 /* LatestPunchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5C21940E95600181DD8 /* LatestPunchesController.m */; };
 		AF66C5CD1942930800181DD8 /* StatusBarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5CC1942930800181DD8 /* StatusBarItemView.m */; };
 		AF66C5D31942964D00181DD8 /* StatusBarItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF66C5D21942964D00181DD8 /* StatusBarItemController.m */; };
 		AFB5AA9219394E0100BD1FC6 /* NSData+NSRBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AA8519394E0100BD1FC6 /* NSData+NSRBase64.m */; };
@@ -73,10 +71,7 @@
 		AF3E29D419551F0F0081D934 /* PunchWithoutPow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PunchWithoutPow.png; sourceTree = "<group>"; };
 		AF3E29D519551F0F0081D934 /* PunchWithPow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PunchWithPow.png; sourceTree = "<group>"; };
 		AF3E29D819552A2B0081D934 /* Punch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Punch.mp3; sourceTree = "<group>"; };
-		AF420ED81944DE0000FBC1C1 /* LatestPunchesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LatestPunchesController.xib; sourceTree = "<group>"; };
 		AF420ED91944DE0000FBC1C1 /* StatusBarItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusBarItem.xib; sourceTree = "<group>"; };
-		AF66C5C11940E95600181DD8 /* LatestPunchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatestPunchesController.h; sourceTree = "<group>"; };
-		AF66C5C21940E95600181DD8 /* LatestPunchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LatestPunchesController.m; sourceTree = "<group>"; };
 		AF66C5CB1942930800181DD8 /* StatusBarItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarItemView.h; sourceTree = "<group>"; };
 		AF66C5CC1942930800181DD8 /* StatusBarItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarItemView.m; sourceTree = "<group>"; };
 		AF66C5D11942964D00181DD8 /* StatusBarItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarItemController.h; sourceTree = "<group>"; };
@@ -225,8 +220,6 @@
 		AF66C5C01940E95600181DD8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF66C5C11940E95600181DD8 /* LatestPunchesController.h */,
-				AF66C5C21940E95600181DD8 /* LatestPunchesController.m */,
 				AF66C5D11942964D00181DD8 /* StatusBarItemController.h */,
 				AF66C5D21942964D00181DD8 /* StatusBarItemController.m */,
 				AFD44D561943B25C00314688 /* PanelController.h */,
@@ -293,7 +286,6 @@
 		AFD44D531943ABCD00314688 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
-				AF420ED81944DE0000FBC1C1 /* LatestPunchesController.xib */,
 				AF420ED91944DE0000FBC1C1 /* StatusBarItem.xib */,
 				AFD44D541943AE6500314688 /* Panel.xib */,
 			);
@@ -403,7 +395,6 @@
 				AFD5A7DF19469AA1003D763E /* ClockInverted.png in Resources */,
 				AF2A29B51934CCB000974D10 /* InfoPlist.strings in Resources */,
 				AF3E29D619551F0F0081D934 /* PunchWithoutPow.png in Resources */,
-				AF420EDA1944DE0000FBC1C1 /* LatestPunchesController.xib in Resources */,
 				AFB5AA9419394E0100BD1FC6 /* license.md in Resources */,
 				AF420EDB1944DE0000FBC1C1 /* StatusBarItem.xib in Resources */,
 				AF3E29D719551F0F0081D934 /* PunchWithPow.png in Resources */,
@@ -437,7 +428,6 @@
 				AFB5AA9819394E0100BD1FC6 /* NSRRequest.m in Sources */,
 				AFD5A7E71946A0BD003D763E /* PunchButtonCell.m in Sources */,
 				AF2A29B71934CCB000974D10 /* main.m in Sources */,
-				AF66C5C41940E95600181DD8 /* LatestPunchesController.m in Sources */,
 				AF66C5CD1942930800181DD8 /* StatusBarItemView.m in Sources */,
 				AFD44D5E1943B34400314688 /* PopupView.m in Sources */,
 				AFB5AA9719394E0100BD1FC6 /* NSRRemoteObject.m in Sources */,

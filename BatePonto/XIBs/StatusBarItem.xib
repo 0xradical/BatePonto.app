@@ -12,24 +12,6 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="rIh-7J-SB9" customClass="StatusBarItemController">
-            <connections>
-                <outlet property="menu" destination="UVe-PX-I5o" id="MBY-Dz-dGp"/>
-            </connections>
-        </customObject>
-        <menu id="UVe-PX-I5o">
-            <items>
-                <menuItem isSeparatorItem="YES" id="Jxw-nW-aIt"/>
-                <menuItem title="Quit" id="pJL-Qv-BxI">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="quit:" target="rIh-7J-SB9" id="zel-D7-Ldm"/>
-                    </connections>
-                </menuItem>
-            </items>
-            <connections>
-                <outlet property="delegate" destination="rIh-7J-SB9" id="kBK-jJ-pOu"/>
-            </connections>
-        </menu>
+        <customObject id="rIh-7J-SB9" customClass="StatusBarItemController"/>
     </objects>
 </document>

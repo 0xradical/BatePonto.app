@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 thiago. All rights reserved.
 //
 
-#import "NSRails.h"
-
 @class User;
 
 @interface Punch : NSObject

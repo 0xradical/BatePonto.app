@@ -9,16 +9,11 @@
 #import "StatusBarItemController.h"
 #import "StatusBarItemView.h"
 #import "PanelController.h"
-#import "NSRails.h"
 
 @implementation StatusBarItemController
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // NSRails App URL configuration
-    NSRConfig *defaultConfig = [NSRConfig defaultConfig];
-    [defaultConfig setAppURL:@"http://localhost:3000"];
-    
     // PanelController
     if (![self panelController]) {
         [self setPanelController:[[PanelController alloc] initWithDelegate:self]];
@@ -32,10 +27,10 @@
 
 #pragma mark - IBActions
 
-- (IBAction)quit:(id)sender
-{
-    [NSApp terminate:nil];
-}
+//- (IBAction)quit:(id)sender
+//{
+//    [NSApp terminate:nil];
+//}
 
 #pragma mark - StatusBarItemViewDelegate protocol
 
