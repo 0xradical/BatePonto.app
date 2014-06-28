@@ -11,12 +11,6 @@
 
 @implementation Punch
 
-- (BOOL) shouldOnlySendIDKeyForNestedObjectProperty:(NSString *)property
-{
-    return [property isEqualToString:@"user"];
-}
-
-
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"Punch entrance:%@ createdAt:%@ updatedAt:%@ punchedAt:%@ comment:%@", [self.entrance isEqualToNumber:[NSNumber numberWithInt:1]] ? @"YES" : @"NO",

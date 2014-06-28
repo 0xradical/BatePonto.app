@@ -19,8 +19,9 @@
 #define PANEL_WIDTH 280
 #define MENU_ANIMATION_DURATION .1
 
-
 @interface PanelController ()
+
+@property (nonatomic) NSMutableData *punchResponseData;
 
 @end
 
@@ -184,48 +185,126 @@
 
 - (IBAction)punch:(id)sender
 {
-    NSRRequest *request
-    = [[NSRRequest POST] routeTo:@"/api/punches"];
-    
+    NSURL *base = [NSURL URLWithString:@"http://localhost:3000"];
+    NSString *appendedRoute = @"/api/punches";
+
     // AuthorizationSettings.plist in Supporting Files
     // Containing a KV pair "API Token" - "Value of API Token"
     NSString *authSettingsFile = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"AuthorizationSettings.plist"];
-    
+
     NSDictionary *authSettings = [NSDictionary dictionaryWithContentsOfFile:authSettingsFile];
     
-    request.queryParameters = @{
-                                @"user_token": @"02c8957ff68e21b24ac46004a6a0790b",
-                                @"api_token": authSettings[@"API Token"]
-                                };
+    NSDictionary *queryParameters = @{
+      @"user_token": @"02c8957ff68e21b24ac46004a6a0790b",
+      @"api_token": authSettings[@"API Token"]
+    };
+
     
-    request.body = @{
-                     @"punch":
-                         @{
-                             @"comment": [[self comment] stringValue]
-                             }
-                     };
+	if (queryParameters.count > 0)
+	{
+		NSMutableArray *params = [NSMutableArray arrayWithCapacity:queryParameters.count];
+		[queryParameters enumerateKeysAndObjectsUsingBlock:
+		 ^(id key, id obj, BOOL *stop)
+		 {
+			 //TODO
+			 //Escape to be RFC 1808 compliant
+			 [params addObject:[NSString stringWithFormat:@"%@=%@",key,obj]];
+		 }];
+		appendedRoute = [appendedRoute stringByAppendingFormat:@"?%@",[params componentsJoinedByString:@"&"]];
+	}
     
-    __unused __block id json;
+    NSURL *url = [NSURL URLWithString:appendedRoute relativeToURL:base];
     
-    [request sendAsynchronous:^(id jsonRep, NSError *error) {
-        json = jsonRep;
-        
-        if (error) {
-            [[self serverMessage] setStringValue:[NSString stringWithFormat:@"Error: %@", [error localizedDescription]]];
-        }
-        else {
-            [[self serverMessage] setStringValue:@"Punched successfully!"];
-        }
-        
-        [[self serverMessage] setHidden:NO];
-        [[self comment] setStringValue:@""];
-    }];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+														   cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+													   timeoutInterval:60.0f];
+	
+	[request setHTTPMethod:@"POST"];
+	[request setHTTPShouldHandleCookies:NO];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
+    NSDictionary *body = @{
+                           @"punch":
+                               @{
+                                   @"comment": [[self comment] stringValue]
+                                   }
+                           };
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:body options:NSJSONWritingPrettyPrinted error:nil];
+    
+    if (data)
+    {
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    }
+    
+    [request setHTTPBody:data];
+    [request setValue:@(data.length).stringValue forHTTPHeaderField:@"Content-Length"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:self];    
+
+//    __unused __block id json;
+//    
+//    [request sendAsynchronous:^(id jsonRep, NSError *error) {
+//        json = jsonRep;
+//        NSString *errorMessage;
+//        
+//        if (error) {
+//            switch ([error code]) {
+//                case NSURLErrorUserCancelledAuthentication:
+//                    errorMessage = @"Unauthorized";
+//                    break;
+//                    
+//                default:
+//                    errorMessage = [error localizedDescription];
+//                    break;
+//            }
+//            [[self serverMessage] setStringValue:[NSString stringWithFormat:@"Error: %@", jsonRep]];
+//        }
+//        else {
+//            [[self serverMessage] setStringValue:@"Punched successfully!"];
+//        }
+//        
+//        [[self serverMessage] setHidden:NO];
+//        [[self comment] setStringValue:@""];
+//    }];
 
 }
 
 - (IBAction)comment:(id)sender
 {
     [[self punchButton] performClick:nil];
+}
+
+#pragma mark NSURLConnection Delegate Methods
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // A response has been received, this is where we initialize the instance var you created
+    // so that we can append data to it in the didReceiveData method
+    // Furthermore, this method is called each time there is a redirect so reinitializing it
+    // also serves to clear it
+    _punchResponseData = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    // Append the new data to the instance variable you declared
+    [_punchResponseData appendData:data];
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
+    // Return nil to indicate not necessary to store a cached response for this connection
+    return nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    // The request is complete and data has been received
+    // You can parse the stuff in your instance variable now
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    // The request has failed for some reason!
+    // Check the error var
 }
 
 @end

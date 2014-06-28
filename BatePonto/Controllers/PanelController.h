@@ -11,7 +11,7 @@
 
 @class PopupView;
 
-@interface PanelController : NSWindowController
+@interface PanelController : NSWindowController <NSURLConnectionDelegate>
 
 @property (weak) IBOutlet NSTextField *comment;
 @property (weak) IBOutlet NSTextField *serverMessage;

@@ -8,9 +8,7 @@
 
 #import "NSRails.h"
 
-@class Punch;
-
-@interface User : NSRRemoteObject
+@interface User : NSObject
 
 @property (nonatomic) NSMutableArray *punches;
 @property (nonatomic) NSString *name, *passwordDigest, *token, *shifts, *goals;

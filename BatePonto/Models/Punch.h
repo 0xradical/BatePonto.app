@@ -10,7 +10,7 @@
 
 @class User;
 
-@interface Punch : NSRRemoteObject
+@interface Punch : NSObject
 
 @property (nonatomic) User *user;
 @property (nonatomic) NSDate *createdAt, *updatedAt, *punchedAt;

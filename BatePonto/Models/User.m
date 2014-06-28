@@ -11,12 +11,4 @@
 
 @implementation User
 
-- (Class) nestedClassForProperty:(NSString *)property
-{
-    if ([property isEqualToString:@"punches"])
-        return [Punch class];
-
-    return [super nestedClassForProperty:property];
-}
-
 @end
