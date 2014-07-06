@@ -22,3 +22,9 @@ convert \( Clock.png -alpha extract \) -background white -alpha shape ClockInver
 I don't have money and/or the skills necessary to use
 Illustrator or any other vector software, so I gave [QBlocks](http://www.nlinea.com) a try and it's really sweet! My first icon ever! It's versioned in the project in case someone wants to change
 the punch image.
+
+## App Preferences
+
+Guide [here](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/UserDefaults/AccessingPreferenceValues/AccessingPreferenceValues.html)
+
+[Alternatively](https://developer.apple.com/library/mac/documentation/security/conceptual/cryptoservices/KeyManagementAPIs/KeyManagementAPIs.html)
